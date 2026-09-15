@@ -10,7 +10,7 @@
 - [x] Author-approved AGPL-3.0-only for Python code; no additional open-content grant for other material. Third-party dependency notices recorded.
 - [x] Populate CITATION.cff from confirmed author metadata; no invented ORCID or DOI.
 - [x] Document historical cross-links and unavailable inputs; not a self-contained training distribution.
-- [x] Run integrity and seed-summary utilities successfully (540 rows, 54 groups); disclose known scientific limitations and AI-assisted release preparation.
+- [x] Run integrity and seed-summary utilities successfully (540 rows, 54 groups); disclose known scientific limitations and AI-assisted release preparation. Current manuscript/Supplement, figure and public-package assistance are distinguished in `../CODE_AI_DISCLOSURE.md`; the recorded verification run is an original release-preparation activity, not a new run during disclosure alignment.
 - [x] Upload ONLY this package, not the parent Unity project or its history; public repository visibility verified.
 - [ ] Create a fixed release and archive it in Zenodo; verify the version DOI.
 - [ ] Replace manuscript URL/DOI placeholders only after public access succeeds.

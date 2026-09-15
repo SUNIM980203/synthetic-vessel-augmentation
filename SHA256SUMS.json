@@ -1,7 +1,7 @@
 {
   ".gitignore": "c8a60fb2b276894bd68640447004e9e45c884700a2645f20d4536d4193a3ea37",
   "CITATION.cff": "0607c543ddde16f9994d33a08a1af8da2bc08e7df3f99a164d6cb90047b8a138",
-  "CODE_AI_DISCLOSURE.md": "3d6977f76e6b679da5dace76b0e74580bfea2b38e96ee0fe223b73299d8c9daf",
+  "CODE_AI_DISCLOSURE.md": "dd5ca0516cfe655ed33862b7fb07495f87ffe870017897fcd674ab101ed039e2",
   "diagnostic/02_per_seed_contrasts/yolo26m_per_seed_factorial_contrasts.csv": "683bb460111b3f186b50ca5f130ffb2c9d035f00aae12deaf6c809755d1d267a",
   "diagnostic/07_statistics/diagnostic_results.json": "3ab6d1081e56ab8ee9a8db75771440ef724e8a6f4ec892ebeceea17bcc05afff",
   "diagnostic/07_statistics/yolo26m_lr2e4_seed_influence_ranking.csv": "c74548c93d9441cf6b37fdf5410edc08d35a3ecea1cb7c9eb2ad997d10e4ae80",
@@ -12,7 +12,7 @@
   "docs/AUTHOR_METADATA.md": "5d7dfc1ac3e2935debd8458d06b29ad7e147ef6da97ebca0f32cc6a65e66070d",
   "docs/DATA_ACCESS.md": "13cadfed6d215f09e9fac4de8bec934130e3dfcbfb1c5408d1c0ba87c8c96b09",
   "docs/LICENSE_REVIEW_PRELIMINARY.md": "4cf59c1e5bf6d39bc9bc37ea48825e16f32c5595f5ac68e32b3f5166b8840645",
-  "docs/RELEASE_CHECKLIST.md": "367ed31669a354f1c5bdd4f48f33d63ec821cf50748ca97079d0dc51d2b6883d",
+  "docs/RELEASE_CHECKLIST.md": "2c70bb2fd0d39be30c16f09a44d222d9aee9fe21f87d5d5ded9053c6236c1533",
   "docs/REPRODUCIBILITY.md": "bd6dbf9fb7674565816b3a557371f5ed1a6098bc22ae403b75ca2476e32cf578",
   "docs/SCIENTIFIC_NOTES.md": "c6c8f5da97b86b2d6b323463719be2b9d203969fa7d02d9e58238927de8212b0",
   "factorial/comparison/yolo26_n_s_m_interpretation.md": "98930b51f9da9c2e4896e9878771d2ff5409762c3c473acc2058282e4864337f",
@@ -205,8 +205,8 @@
   "LICENSE": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
   "LICENSE_STATUS.md": "441cd808347f9a8871ad6d88d44c090fd4921702e6be9dac23d827bbc73940b5",
   "provenance.json": "bce1a4fc0b11843644421160be8932955b937403b509c0f0d85194ec09d8a64e",
-  "README.md": "2c2b0747b5c9e3240be3d00de75620488fa31299dc7d98f55c5fb0b2f631509d",
-  "README_KO.md": "d62a98ddb1a9a8dcd8a4b81eb8182005b821e338ba280838d078561aeeaf03bc",
+  "README.md": "ba08502314412d76eb95009c06cb738506e8873b2c268990a56d956947dc2cc0",
+  "README_KO.md": "dd9caba7c1604e81ddddf4cc0ae3bd91bcf5761c679aad0b1756f89157c2635b",
   "scripts/recompute_seed_summary.py": "3c574a71cedaee875a3aa7ecc5e75c914e51f0f5ffa1a9a7bd9c0237d499c06d",
   "scripts/verify_package.py": "01b5c55185167bf5434e16f7bd2eb77e3d9f07165a51f0459a3672793f7b0964",
   "THIRD_PARTY_NOTICES.md": "fc1f90063e544395d2d173f8d21694e196d0e0bda18a7a1498197787c00e43f8"

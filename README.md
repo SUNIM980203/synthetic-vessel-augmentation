@@ -29,6 +29,6 @@ These commands use the standard library only. They neither train nor load models
 
 ## Publication gate
 
-Read `docs/RELEASE_CHECKLIST.md` for verification scope and remaining author actions. The current manuscript is NOT included. Authors and contact information are recorded in `docs/AUTHOR_METADATA.md`; AI-assisted package preparation is disclosed in `CODE_AI_DISCLOSURE.md`. A Zenodo DOI has not been minted. Historical prepublication license/status notes are chronological records; the root LICENSE_STATUS.md governs this package.
+Read `docs/RELEASE_CHECKLIST.md` for verification scope and remaining author actions. The current manuscript is NOT included. Authors and contact information are recorded in `docs/AUTHOR_METADATA.md`; AI assistance in manuscript, figure, and public-package preparation is described in the manuscript Acknowledgment and `CODE_AI_DISCLOSURE.md`. The authors reviewed and revised the assisted materials and remain responsible for the scientific content. A Zenodo DOI has not been minted. Historical prepublication license/status notes are chronological records; the root LICENSE_STATUS.md governs this package.
 
 The package does not claim complete independent end-to-end reproduction. Exact split membership, private source inputs and per-image predictions are not distributed. Historical cross-links can point to withheld files. Historical checksum indexes were omitted because copies are normalized/redacted; use the root integrity index instead.
