@@ -17,9 +17,9 @@ ORCIDs: not supplied; none invented.
 ## Release decisions supplied by the user
 
 - Personal GitHub account confirmed by user: SUNIM980203 (https://github.com/SUNIM980203).
-- User-approved target: SUNIM980203/synthetic-vessel-augmentation, public visibility. Not yet created or published; release checks and license decision remain pending.
+- User-approved public repository: https://github.com/SUNIM980203/synthetic-vessel-augmentation . Initial upload completed and public visibility verified.
 - User confirms coauthors and professor agree to publication of the research materials.
 - Excluded materials will not be provided separately or upon request.
 - User approved proceeding with AGPL-3.0 code licensing; see root LICENSE_STATUS.md and THIRD_PARTY_NOTICES.md. Non-code content is not given an additional open-content license. Consent does not override third-party rights.
 
-This records author-provided metadata, not an independently verified institutional record. No manuscript file was edited and no external upload was performed.
+This records author-provided metadata, not an independently verified institutional record. No manuscript file was edited. Only this scoped package was uploaded to the approved public repository.

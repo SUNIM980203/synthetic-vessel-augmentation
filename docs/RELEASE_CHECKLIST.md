@@ -11,10 +11,10 @@
 - [x] Populate CITATION.cff from confirmed author metadata; no invented ORCID or DOI.
 - [x] Document historical cross-links and unavailable inputs; not a self-contained training distribution.
 - [x] Run integrity and seed-summary utilities successfully (540 rows, 54 groups); disclose known scientific limitations and AI-assisted release preparation.
-- [ ] Upload ONLY this package, not the parent Unity project or its history.
+- [x] Upload ONLY this package, not the parent Unity project or its history; public repository visibility verified.
 - [ ] Create a fixed release and archive it in Zenodo; verify the version DOI.
 - [ ] Replace manuscript URL/DOI placeholders only after public access succeeds.
 
-Upload and DOI checkboxes are intentionally left open in this pre-upload record. Remote commit verification is recorded in the task after upload. No Zenodo DOI exists yet; do not imply otherwise.
+Initial archive uploaded to https://github.com/SUNIM980203/synthetic-vessel-augmentation . Remote verification is recorded in the task. No Zenodo DOI exists yet; do not imply otherwise.
 
 Personal GitHub account SUNIM980203 and public target synthetic-vessel-augmentation were approved by the user. Authenticated CLI account matches. Consent recorded above is user-reported, not an independent rights audit. This archive is for scientific inspection, not a claim of manuscript acceptance or complete independent reproducibility.

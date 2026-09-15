@@ -1,6 +1,6 @@
 # Synthetic augmentation and adaptation-scope study — public review package
 
-Author-authorized research archive for `SUNIM980203/synthetic-vessel-augmentation`. Python code is AGPL-3.0-only; other material has no additional open-content license (see LICENSE_STATUS.md). No DOI or manuscript submission-readiness claim is made.
+Public research archive: https://github.com/SUNIM980203/synthetic-vessel-augmentation . Python code is AGPL-3.0-only; other material has no additional open-content license (see LICENSE_STATUS.md). No DOI or manuscript submission-readiness claim is made.
 
 This package accompanies manuscript v49.4.2. It combines the earlier v45.1 evidence archive with the subsequent YOLO26n/s/m factorial follow-ups and the explicitly post-hoc ordinal-42 diagnostic. Historical files retain their original chronological claims; they do not supersede the later disclosures below.
 
