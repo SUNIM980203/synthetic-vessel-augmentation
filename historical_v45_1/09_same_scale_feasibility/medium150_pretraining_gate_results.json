@@ -1,0 +1,142 @@
+{
+  "analysis": "medium150_historical_high_low_pretraining_gate",
+  "completed_at_utc": "2026-08-15T21:21:24.683440+00:00",
+  "historical_frames": 150,
+  "candidate_raw_budget_per_host": 2080,
+  "unique_retained_per_host": 2048,
+  "hosts_with_full_candidate_pool": 150,
+  "selected_high_low_pairs": 150,
+  "support": {
+    "selected_host_count": 150,
+    "all_required_hosts_matched": true,
+    "median_gap": 0.0747310221195221,
+    "fraction_gap_ge_0_04": 0.8,
+    "minimum_gap": 0.006708860397338867,
+    "maximum_gap": 0.24505400657653809,
+    "pass": true
+  },
+  "high_absolute_weber_wasserstein": 0.3864619718043419,
+  "low_absolute_weber_wasserstein": 0.3824895591364185,
+  "other_radiometry_pass": false,
+  "pairwise_radiometry_pass": true,
+  "appearance_balance": {
+    "rows": [
+      {
+        "family": "baseline",
+        "high_count": 11,
+        "low_count": 11,
+        "difference": 0
+      },
+      {
+        "family": "texture_realization",
+        "high_count": 77,
+        "low_count": 77,
+        "difference": 0
+      },
+      {
+        "family": "spatial_frequency",
+        "high_count": 39,
+        "low_count": 39,
+        "difference": 0
+      },
+      {
+        "family": "material_chroma",
+        "high_count": 8,
+        "low_count": 8,
+        "difference": 0
+      },
+      {
+        "family": "fine_detail",
+        "high_count": 15,
+        "low_count": 15,
+        "difference": 0
+      }
+    ],
+    "total_variation_distance": 0.0,
+    "maximum_absolute_count_difference": 0,
+    "criterion": "exact marginal High/Low count equality for every frozen remaining family",
+    "pass": true
+  },
+  "orientation_fidelity_pass": true,
+  "geometry_pass": true,
+  "source_raster_pair_identity_pass": true,
+  "integrity": {
+    "raw_candidate_count": 312000,
+    "raw_unique_uid_count": 312000,
+    "raw_unique_rng_seed_count": 312000,
+    "raw_unique_final_image_count": 311970,
+    "retained_candidate_count": 307200,
+    "retained_unique_final_image_count": 307200,
+    "prior_uid_overlap_count": 0,
+    "prior_rng_overlap_count": 0,
+    "prior_retained_final_image_overlap_count": 0,
+    "unexpected_raw_hash_duplicate_count": 0,
+    "selected_candidate_count": 300,
+    "selected_unique_uid_count": 300,
+    "selected_unique_final_image_count": 300,
+    "within_pair_pixel_identity_count": 0,
+    "pass": true
+  },
+  "real_training_vessels": 3727,
+  "synthetic_insertions_per_arm": 150,
+  "nominal_augmentation_dose": 0.04024684733029246,
+  "training_recipe_artifact": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/confirmation_freeze.json",
+  "training_recipe_sha256": "37bb6b2ab5d81db5797ab7c7ff33c8a082517582801ec2b86f0a20bd55d2dc35",
+  "gates": [
+    {
+      "gate": "ORIENTATION_AMENDMENT_FROZEN",
+      "status": "PASS"
+    },
+    {
+      "gate": "FRAME_PROVENANCE",
+      "status": "PASS"
+    },
+    {
+      "gate": "CANDIDATE_COUNT",
+      "status": "PASS"
+    },
+    {
+      "gate": "INTEGRITY",
+      "status": "PASS"
+    },
+    {
+      "gate": "SELECTOR_FEASIBILITY",
+      "status": "PASS"
+    },
+    {
+      "gate": "SUPPORT",
+      "status": "PASS"
+    },
+    {
+      "gate": "ABSOLUTE_RADIOMETRY",
+      "status": "FAIL"
+    },
+    {
+      "gate": "PAIRWISE_RADIOMETRY",
+      "status": "PASS"
+    },
+    {
+      "gate": "APPEARANCE_BALANCE",
+      "status": "PASS"
+    },
+    {
+      "gate": "ORIENTATION_FIDELITY",
+      "status": "PASS"
+    },
+    {
+      "gate": "GEOMETRY",
+      "status": "PASS"
+    },
+    {
+      "gate": "EXPOSURE_DOSE",
+      "status": "PASS"
+    }
+  ],
+  "MEDIUM150_PRETRAINING_GATE": "FAIL",
+  "TRAINING_READY_FOR_AUTHOR_REVIEW": false,
+  "TRAINING_UNLOCKED": false,
+  "DETECTOR_TRAINING_RUNS": 0,
+  "AP_VALUES_INSPECTED": 0,
+  "DETECTOR_PREDICTIONS_GENERATED": 0,
+  "EFFICACY_CHECKPOINTS_CREATED": 0
+}

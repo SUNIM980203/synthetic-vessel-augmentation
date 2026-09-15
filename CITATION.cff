@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this research archive when using its materials. No paper publication or DOI is asserted."
+url: "https://github.com/SUNIM980203/synthetic-vessel-augmentation"
+title: "Model-Conditional Effects of Synthetic Vessel Augmentation in Optical Satellite Detection: Evidence Across Adaptation Scopes and YOLO26 Variants — Reproducibility Materials"
+authors:
+  - family-names: Choi
+    given-names: Hyunbin
+    affiliation: "Department of Artificial Intelligence Convergence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"
+  - family-names: Woo
+    given-names: Donghyun
+    affiliation: "Department of Advanced Defense Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"
+  - family-names: Yu
+    given-names: Sunjin
+    affiliation: "Department of Artificial Intelligence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"
+    email: sjyu@changwon.ac.kr
+type: dataset
+version: "v49.4.2"

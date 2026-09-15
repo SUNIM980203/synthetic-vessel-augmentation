@@ -1,0 +1,97 @@
+{
+  "study": "YOLO26s model-size scope x LR replication",
+  "created_utc": "2026-08-24T06:15:48.218372+00:00",
+  "frozen_before_first_factorial_result": true,
+  "roles": {
+    "protocol_freezer": {
+      "path": "tools/freeze_yolo26s_factorial_protocol.py",
+      "sha256": "d46be88f137e348700836c269ea4cfc8a9c604c6d1ec45244451e44dcfd2bedc"
+    },
+    "shared_definitions": {
+      "path": "tools/yolo26s_factorial_common.py",
+      "sha256": "da3d1a89e0399d01f5e113a835b75a0df8ddf87f2abafb60e6aaae324d012066"
+    },
+    "training_runner": {
+      "path": "tools/run_yolo26s_factorial_fresh.py",
+      "sha256": "84910348bd8e0842a17cb3a3c95794c3a9dc0d21dc410d867bb59a401be9ee5d"
+    },
+    "ap_evaluator": {
+      "path": "tools/evaluate_yolo26s_factorial.py",
+      "sha256": "65fa756bc9da05ffcd0a5d6c4a1fd4cd4e6f01a293ebd15bb8356df0436fc663"
+    },
+    "factorial_contrast_script": {
+      "path": "tools/analyze_yolo26s_factorial.py",
+      "sha256": "525e3a58464ba40085948defcb9b1ea97fa3faafb06ee635a3106f1e6321ce2c"
+    },
+    "scene_bootstrap_script": {
+      "path": "tools/analyze_yolo26s_factorial_scene.py",
+      "sha256": "623cda8d3c44c7234f5db79c5055a7ea81b719349319e0547e6d4f8d33e74ce3"
+    },
+    "model_size_comparison": {
+      "path": "tools/compare_yolo26n_yolo26s_factorial.py",
+      "sha256": "33235841b020b7b15ace0e4b8f26f18f250a8e5953f8e5c244ced3fac6563747"
+    },
+    "numerical_audit": {
+      "path": "tools/audit_yolo26s_factorial_numerics.py",
+      "sha256": "6677fe19088f6d21825aac5638984a51a16adb55997f0685884049ea90194897"
+    },
+    "table_generator": {
+      "path": "tools/generate_yolo26s_factorial_tables.py",
+      "sha256": "0b6cbbe1f44d0d437fd532f969365e645b1a5f03f73eaa84753787c186b7fb75"
+    },
+    "figure_generator": {
+      "path": "tools/generate_yolo26s_factorial_figures.py",
+      "sha256": "5e25425c8eebac9e337975a592464718801bfe97d51893952ea04b0959a948a0"
+    },
+    "final_report_generator": {
+      "path": "tools/finalize_yolo26s_factorial.py",
+      "sha256": "338fcbd75e26e8827fbbed8c3becf1b9bb0159432df77bbf4cfe48baf5b68ebd"
+    },
+    "postprocess_orchestrator": {
+      "path": "tools/run_yolo26s_factorial_postprocess.py",
+      "sha256": "47f2d3d79af2c7ef9708fc458588e5bbc4111860edde91b65372cae606ff54d1"
+    },
+    "figure_scope_s1": {
+      "path": "yolo26s_scope_lr_factorial_replication_v1/16_figures/figure_scope_s1/figure_script.py",
+      "sha256": "9981b9dfa71a863018c62ea4f5db9224aff60f99689c1802d8c8cf17b95e0d93"
+    },
+    "figure_scope_s2": {
+      "path": "yolo26s_scope_lr_factorial_replication_v1/16_figures/figure_scope_s2/figure_script.py",
+      "sha256": "2a7090f22485b6bc7b9113e63bedeaac846ba9d2821de7d7bca6beb6f5c0cb39"
+    },
+    "figure_scope_s3": {
+      "path": "yolo26s_scope_lr_factorial_replication_v1/16_figures/figure_scope_s3/figure_script.py",
+      "sha256": "256dc73be9fc5c43c38cdbc7703e2b6983bcdc9407f710039d252fe34d10e076"
+    },
+    "figure_scope_s4": {
+      "path": "yolo26s_scope_lr_factorial_replication_v1/16_figures/figure_scope_s4/figure_script.py",
+      "sha256": "e988d74843a42c299952af473fd127585168412dea053386921d0f84eac7969b"
+    },
+    "figure_scope_s5": {
+      "path": "yolo26s_scope_lr_factorial_replication_v1/16_figures/figure_scope_s5/figure_script.py",
+      "sha256": "9c20b2d2b25d48eadd199f09aaa54b9212c486c2c96c905c762001e89fabc154"
+    }
+  },
+  "primary": {
+    "dataset": "xview_test",
+    "metric": "vessel AP50-95",
+    "estimand": "mean over 10 paired seeds of 0.5*(DiD_1e-4+DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI",
+    "decision": "positive evidence iff lower CI endpoint > 0",
+    "t_test": "one-sample two-sided",
+    "sign_test": "exact two-sided excluding exact zero"
+  },
+  "scene": {
+    "replicates": 2000,
+    "rng_seed": 20260813,
+    "shared_multiplicities": true,
+    "loso_scenes": 9,
+    "interpretation": "sparse-cluster sensitivity"
+  },
+  "classification": {
+    "A": "marginal CI > 0 and both fixed-LR means > 0",
+    "B": "marginal CI > 0 but fixed-LR means not both > 0",
+    "C": "marginal CI includes zero",
+    "D": "marginal mean < 0"
+  }
+}

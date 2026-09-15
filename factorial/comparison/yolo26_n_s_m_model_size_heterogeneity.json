@@ -1,0 +1,298 @@
+{
+  "study": "prospectively frozen within-study YOLO26m third-model-size follow-up",
+  "completed_utc": "2026-09-09T04:21:51.656280+00:00",
+  "primary_dataset": "xview_test",
+  "primary_metric": "vessel_ap50_95",
+  "models": {
+    "YOLO26n": {
+      "values": [
+        0.013911742479786503,
+        0.008518008350305865,
+        0.01548186443310915,
+        0.012521718139452225,
+        0.011807310462096446,
+        0.01237067968473448,
+        0.0041532085922768025,
+        0.013574840506476733,
+        0.019419367376213924,
+        0.014713099754512283
+      ],
+      "n": 10,
+      "mean": 0.012647183977896442,
+      "sample_sd": 0.004090922704091995,
+      "median": 0.01304827932296448,
+      "minimum": 0.0041532085922768025,
+      "maximum": 0.019419367376213924,
+      "two_sided_95_ci": [
+        0.009720714169732048,
+        0.015573653786060836
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": 9.776255933004304,
+      "one_sample_t_two_sided_p": 4.318460712724931e-06,
+      "positive_count": 10,
+      "negative_count": 0,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.001953125
+    },
+    "YOLO26s": {
+      "values": [
+        -0.007043197543703784,
+        -0.00567202151676964,
+        -0.011378518402139402,
+        0.017035330750794685,
+        -0.006903479262436021,
+        0.005548590931449937,
+        0.007619148717975734,
+        0.0011495457790982114,
+        -0.010545131287460319,
+        -0.001859459282683204
+      ],
+      "n": 10,
+      "mean": -0.0012049191115873804,
+      "sample_sd": 0.00906402220330774,
+      "median": -0.003765740399726422,
+      "minimum": -0.011378518402139402,
+      "maximum": 0.017035330750794685,
+      "two_sided_95_ci": [
+        -0.007688929990595012,
+        0.005279091767420251
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": -0.4203750502169128,
+      "one_sample_t_two_sided_p": 0.6840704904549152,
+      "positive_count": 4,
+      "negative_count": 6,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.75390625
+    },
+    "YOLO26m": {
+      "values": [
+        0.015771126265665097,
+        -0.009165081134717881,
+        0.004239654749441851,
+        0.004757822316693201,
+        0.00697286450817465,
+        -0.038919568360844245,
+        -0.007202208987618718,
+        0.014972093992033676,
+        0.01616686870160848,
+        0.017092183033583647
+      ],
+      "n": 10,
+      "mean": 0.002468575508401976,
+      "sample_sd": 0.01733749773435336,
+      "median": 0.005865343412433926,
+      "minimum": -0.038919568360844245,
+      "maximum": 0.017092183033583647,
+      "two_sided_95_ci": [
+        -0.009933923228118452,
+        0.014871074244922403
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": 0.4502565077306712,
+      "one_sample_t_two_sided_p": 0.6631754836707764,
+      "positive_count": 7,
+      "negative_count": 3,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.34375
+    }
+  },
+  "paired_seed_differences": {
+    "n_minus_s": {
+      "values": [
+        0.020954940023490288,
+        0.014190029867075505,
+        0.026860382835248553,
+        -0.0045136126113424595,
+        0.018710789724532467,
+        0.006822088753284543,
+        -0.003465940125698931,
+        0.012425294727378522,
+        0.029964498663674243,
+        0.016572559037195487
+      ],
+      "n": 10,
+      "mean": 0.013852103089483822,
+      "sample_sd": 0.011542519723749227,
+      "median": 0.015381294452135496,
+      "minimum": -0.0045136126113424595,
+      "maximum": 0.029964498663674243,
+      "two_sided_95_ci": [
+        0.005595081892797204,
+        0.022109124286170442
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": 3.7950289186939905,
+      "one_sample_t_two_sided_p": 0.004249689418541806,
+      "positive_count": 8,
+      "negative_count": 2,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.109375
+    },
+    "n_minus_m": {
+      "values": [
+        -0.001859383785878594,
+        0.017683089485023746,
+        0.0112422096836673,
+        0.007763895822759024,
+        0.0048344459539217954,
+        0.051290248045578725,
+        0.01135541757989552,
+        -0.001397253485556943,
+        0.003252498674605444,
+        -0.002379083279071364
+      ],
+      "n": 10,
+      "mean": 0.010178608469494465,
+      "sample_sd": 0.015874408607763946,
+      "median": 0.00629917088834041,
+      "minimum": -0.002379083279071364,
+      "maximum": 0.051290248045578725,
+      "two_sided_95_ci": [
+        -0.001177259356269637,
+        0.021534476295258564
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": 2.0276400192282136,
+      "one_sample_t_two_sided_p": 0.07321304395239768,
+      "positive_count": 7,
+      "negative_count": 3,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.34375
+    },
+    "s_minus_m": {
+      "values": [
+        -0.022814323809368882,
+        0.003493059617948241,
+        -0.015618173151581254,
+        0.012277508434101483,
+        -0.013876343770610672,
+        0.04446815929229418,
+        0.014821357705594451,
+        -0.013822548212935465,
+        -0.0267119999890688,
+        -0.01895164231626685
+      ],
+      "n": 10,
+      "mean": -0.0036734946199893565,
+      "sample_sd": 0.022225648435998512,
+      "median": -0.013849445991773068,
+      "minimum": -0.0267119999890688,
+      "maximum": 0.04446815929229418,
+      "two_sided_95_ci": [
+        -0.019572765718356994,
+        0.01222577647837828
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": -0.5226668641408835,
+      "one_sample_t_two_sided_p": 0.6138272476273561,
+      "positive_count": 4,
+      "negative_count": 6,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.75390625
+    }
+  },
+  "auxiliary_orientations_for_classification": {
+    "m_minus_s": {
+      "values": [
+        0.022814323809368882,
+        -0.003493059617948241,
+        0.015618173151581254,
+        -0.012277508434101483,
+        0.013876343770610672,
+        -0.04446815929229418,
+        -0.014821357705594451,
+        0.013822548212935465,
+        0.0267119999890688,
+        0.01895164231626685
+      ],
+      "n": 10,
+      "mean": 0.0036734946199893565,
+      "sample_sd": 0.022225648435998512,
+      "median": 0.013849445991773068,
+      "minimum": -0.04446815929229418,
+      "maximum": 0.0267119999890688,
+      "two_sided_95_ci": [
+        -0.01222577647837828,
+        0.019572765718356994
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": 0.5226668641408835,
+      "one_sample_t_two_sided_p": 0.6138272476273561,
+      "positive_count": 6,
+      "negative_count": 4,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.75390625
+    },
+    "m_minus_n": {
+      "values": [
+        0.001859383785878594,
+        -0.017683089485023746,
+        -0.0112422096836673,
+        -0.007763895822759024,
+        -0.0048344459539217954,
+        -0.051290248045578725,
+        -0.01135541757989552,
+        0.001397253485556943,
+        -0.003252498674605444,
+        0.002379083279071364
+      ],
+      "n": 10,
+      "mean": -0.010178608469494465,
+      "sample_sd": 0.015874408607763946,
+      "median": -0.00629917088834041,
+      "minimum": -0.051290248045578725,
+      "maximum": 0.002379083279071364,
+      "two_sided_95_ci": [
+        -0.021534476295258564,
+        0.001177259356269637
+      ],
+      "student_t_df": 9,
+      "student_t_critical_0_975": 2.262157162798205,
+      "one_sample_t_statistic": -2.0276400192282136,
+      "one_sample_t_two_sided_p": 0.07321304395239768,
+      "positive_count": 3,
+      "negative_count": 7,
+      "zero_count": 0,
+      "exact_two_sided_sign_p": 0.34375
+    }
+  },
+  "classification_precedence": [
+    "M5",
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "interpretation_class": "CASE M3",
+  "interpretation": "The YOLO26m interaction is near zero or statistically inconclusive under the frozen seed-level interval.",
+  "causal_boundary": "Paired differences are descriptive cross-model comparisons; model size is not randomized or interpreted causally, and no monotonic trend is fitted.",
+  "sources": {
+    "YOLO26n": {
+      "statistics": "<WORKSPACE>\\scope_lr_factorial_followup_v1\\08_statistics\\scope_lr_factorial_statistics.json",
+      "statistics_sha256": "b94f4b81917255b1bbdb24c49324c2e0f6eb18e589f64553229c81ac94caaf62",
+      "per_seed": "<WORKSPACE>\\scope_lr_factorial_followup_v1\\08_statistics\\scope_lr_factorial_per_seed_contrasts.csv",
+      "per_seed_sha256": "5c37259b61646fda2d67ad6f4fbc103b6523d13f39340a57d45d7d849d8c04f8"
+    },
+    "YOLO26s": {
+      "statistics": "<WORKSPACE>\\yolo26s_scope_lr_factorial_replication_v1\\12_statistics\\yolo26s_factorial_statistics.json",
+      "statistics_sha256": "db45cea2f4d5f990ec13994e1ce333c81aa8bef114ddf59e6fa3ab9504f3dec6",
+      "per_seed": "<WORKSPACE>\\yolo26s_scope_lr_factorial_replication_v1\\12_statistics\\yolo26s_factorial_per_seed_contrasts.csv",
+      "per_seed_sha256": "260b886652b404a88b1fd01985863fe6bea464c465e27f8f61064137eccf30c3"
+    },
+    "YOLO26m": {
+      "statistics": "<WORKSPACE>\\yolo26m_scope_lr_factorial_followup_v1\\11_statistics\\yolo26m_factorial_statistics.json",
+      "statistics_sha256": "2036ff64494001dfb5d1069fbb3b68ded58805e4881b76bc2554c9c34deffb1a",
+      "per_seed": "<WORKSPACE>\\yolo26m_scope_lr_factorial_followup_v1\\11_statistics\\yolo26m_factorial_per_seed_contrasts.csv",
+      "per_seed_sha256": "9a5c1d4bd382a7a4e0f2a1ecbb1a551e358f3e7d13fdb095eb47c9edb4636bbe"
+    }
+  }
+}

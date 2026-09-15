@@ -1,0 +1,4 @@
+split,small_vehicle,bus,truck,excavator,maritime_vessel,total,images,scenes,source_tiffs,small_vehicle_positive_images,bus_positive_images,truck_positive_images,excavator_positive_images,maritime_vessel_positive_images,small_vehicle_positive_scenes,bus_positive_scenes,truck_positive_scenes,excavator_positive_scenes,maritime_vessel_positive_scenes,annotation_sha256
+train,68616,5837,9508,880,3727,88568,1500,40,312,1197,597,758,339,304,40,37,36,28,16,b0ff232d79bae58dd1c1ef035340b20052c75cd75a39e40cb926908c6bbfd029
+val,20068,2910,1537,474,321,25310,375,9,75,318,160,188,85,75,8,7,8,7,4,8d2c9c39df45f5e3221683cd26c9e38d330fc824cd942541c9c205ab4c53b456
+test,13896,688,1081,367,259,16291,375,9,72,281,143,206,93,78,9,7,8,7,4,54e63ecb9e8bf3ab6650c2b92cc4f723f9a86acc64a977269628fd37e8183a54

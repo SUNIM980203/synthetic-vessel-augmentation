@@ -1,0 +1,72 @@
+{
+  "study": "independent Faster R-CNN replication v16",
+  "completed_utc": "2026-07-29T12:45:36.036545+00:00",
+  "protocol_sha256": "4e6168661be0990b5b07d3828b8876fafda1db19b7569e5a68e0c65970d6bdac",
+  "initialization_hash_match_within_seed": {
+    "20260723": true,
+    "20260724": true,
+    "20260725": true,
+    "20260726": true,
+    "20260727": true
+  },
+  "vessel_ap50_95_values": {
+    "duplicate": [
+      0.03257563465107467,
+      0.024696141616505036,
+      0.0332657392438714,
+      0.026731667125999035,
+      0.029557681824316187
+    ],
+    "unity_medium150": [
+      0.02482895440536556,
+      0.025517166373696096,
+      0.030762488098321064,
+      0.029258778213788847,
+      0.03823099683120201
+    ],
+    "realcutout_medium150": [
+      0.0346854586586326,
+      0.031756244413671766,
+      0.034151282225175335,
+      0.018867638975365655,
+      0.03537884658056006
+    ]
+  },
+  "condition_means": {
+    "duplicate": 0.029365372892353265,
+    "unity_medium150": 0.029719676784474715,
+    "realcutout_medium150": 0.030967894170681083
+  },
+  "unity_efficacy": {
+    "differences": [
+      -0.007746680245709112,
+      0.0008210247571910599,
+      -0.0025032511455503337,
+      0.002527111087789812,
+      0.008673315006885826
+    ],
+    "mean_difference": 0.0003543038921214506,
+    "sample_sd": 0.00608145603860043,
+    "lower_one_sided_95": -0.0054437007492997595,
+    "t_0.95_df4": 2.131846786326649,
+    "pass": false
+  },
+  "realcutout_noninferiority": {
+    "differences": [
+      -0.009856504253267041,
+      -0.006239078039975671,
+      -0.0033887941268542707,
+      0.010391139238423192,
+      0.0028521502506419563
+    ],
+    "mean_difference": -0.001248217386206367,
+    "sample_sd": 0.00799814039365051,
+    "lower_one_sided_95": -0.008873571385443094,
+    "t_0.95_df4": 2.131846786326649,
+    "margin": -0.005,
+    "inferentially_tested": false,
+    "pass": false
+  },
+  "external_evaluation_unlocked": false,
+  "sanitization_note": "Aggregate fields only; checkpoint and prediction paths/hashes were deliberately excluded."
+}

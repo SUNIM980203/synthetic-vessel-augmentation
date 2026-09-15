@@ -1,0 +1,42 @@
+{
+  "image_count": 1500,
+  "annotation_count": 88718,
+  "real_annotation_count": 88568,
+  "unity_annotation_count": 150,
+  "augmented_image_count": 150,
+  "unchanged_image_count": 1350,
+  "unity_annotation_count_by_category": {
+    "5": 150
+  },
+  "cutout_count_by_category": {
+    "1": 100,
+    "2": 100,
+    "3": 100,
+    "4": 100,
+    "5": 100
+  },
+  "semantic_placement": true,
+  "sensor_aware": true,
+  "vessel_render_v2": true,
+  "vessel_min_bbox_scale": 32.0,
+  "vessel_max_bbox_scale": 64.0,
+  "vessel_scale_rejection_count": 1595,
+  "unity_bbox_scale_min": 32.0,
+  "unity_bbox_scale_p50": 40.515293362766656,
+  "unity_bbox_scale_p95": 59.36664784436288,
+  "unity_bbox_scale_max": 63.340350488452465,
+  "strict_vessel_water": true,
+  "placement_score_mean": 23.14587848894589,
+  "placement_score_p95": 47.74447052224927,
+  "semantic_rejection_count": 19768,
+  "valid_candidate_count": 10449,
+  "target_count_by_category": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 150
+  },
+  "target_schedule_buffer": 12,
+  "target_count_met": true
+}

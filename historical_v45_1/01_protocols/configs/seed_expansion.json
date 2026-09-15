@@ -1,0 +1,66 @@
+{
+  "protocol_version": "v46",
+  "frozen_local_date": "2026-08-11",
+  "study": "ten-seed head-only robustness expansion",
+  "existing_seeds": [20260723, 20260724, 20260725, 20260726, 20260727],
+  "new_seeds": [20260728, 20260729, 20260730, 20260731, 20260732],
+  "all_seeds": [20260723, 20260724, 20260725, 20260726, 20260727, 20260728, 20260729, 20260730, 20260731, 20260732],
+  "initial_weights": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+  "initial_weights_sha256": "7aab2bd4aebb6181df0350c80883e0c1b2615f363481649d579a23b0e4a7140f",
+  "conditions": {
+    "realonly_standard": {
+      "data": "config/yolo_xview_expanded_real_v1.yaml",
+      "data_sha256": "f8197e77251311a0c586dcb0b8a90c76d0154e3b6623936c59842b2f16a2ebae",
+      "train_tree": "PreparedData/yolo_expanded_v1/real",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187047698,
+      "train_tree_sha256": "d24e46554734728d23b441a582cbb8fca493fa7a3d80bec2419ed62222a07391"
+    },
+    "duplicate": {
+      "data": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "data_sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134",
+      "train_tree": "PreparedData/yolo_expanded_v1/real_duplicate",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187047698,
+      "train_tree_sha256": "3cc61d896aa138de33a746c833bfa26acc57420fb1c75e7dd17e194ecb55239c"
+    },
+    "realcutout_medium150": {
+      "data": "config/yolo_xview_expanded_vessel_realcontrol_v12_150.yaml",
+      "data_sha256": "f314521c844d499b3f512ba911ce67b00af6ded00c1b98a09491395ebda16961",
+      "train_tree": "PreparedData/yolo_expanded_v1/vessel_realcontrol_v12_150",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187240355,
+      "train_tree_sha256": "fcf0fc8144f856fbb595aeccf24abfaee2a25e5fda5a947473e321de6bc398d8"
+    },
+    "unity_medium150": {
+      "data": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+      "data_sha256": "d4737b331ffc0b87cb844f30fca8cba54a54838dea21bb290753a0ccef82d480",
+      "train_tree": "PreparedData/yolo_expanded_v1/vessel_medium_v10_150",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187263426,
+      "train_tree_sha256": "44c49ed5e7d30ae558cf3e5fdaba12db772bb18cb9d5342694365bdcef4298c9"
+    }
+  },
+  "fixed_recipe": {
+    "epochs": 20,
+    "checkpoint": "last.pt",
+    "imgsz": 640,
+    "batch": 16,
+    "workers": 0,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "warmup_epochs": 0.5,
+    "freeze": 23,
+    "mosaic": 0.5,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "deterministic": true,
+    "patience": 100
+  },
+  "evaluation_domains": ["xview_test", "hrsc2016_ms", "dior_public_mirror"],
+  "primary_contrasts": ["unity_medium150 - duplicate", "unity_medium150 - realcutout_medium150"],
+  "secondary_contrasts": ["unity_medium150 - realonly_standard", "duplicate - realonly_standard", "realcutout_medium150 - realonly_standard"],
+  "primary_reporting": "paired mean differences with two-sided Student-t 95% confidence intervals across all ten seeds; exact per-seed values and sign sensitivity retained",
+  "decision_rule": "Robustness estimation only. No retroactive change to v13-v15 gates and no threshold-based promotion or suppression of results."
+}

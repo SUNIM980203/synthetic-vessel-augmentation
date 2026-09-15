@@ -1,0 +1,28 @@
+{
+  "protocol_version": "v48",
+  "initial_weights": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+  "development_seed": 20260819,
+  "confirmation_seeds": [20260723, 20260724, 20260725, 20260726, 20260727, 20260728, 20260729, 20260730, 20260731, 20260732],
+  "development_data": "config/yolo_v48_duplicate_inner.yaml",
+  "confirmation_data": {
+    "duplicate": "config/yolo_xview_expanded_duplicate_v1.yaml",
+    "unity_medium150": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml"
+  },
+  "fixed_recipe": {
+    "imgsz": 640,
+    "batch": 16,
+    "workers": 0,
+    "optimizer": "AdamW",
+    "lrf": 0.1,
+    "warmup_epochs": 0.5,
+    "deterministic": true,
+    "checkpoint": "last.pt"
+  },
+  "development_grid": {
+    "head_only": {"freeze": 23, "learning_rates": [0.00005, 0.0001, 0.0002], "epochs": [10, 20, 30]},
+    "full_network": {"freeze": 0, "learning_rates": [0.00001, 0.00003, 0.0001], "epochs": [10, 20, 30]}
+  },
+  "selection_metric": "final_epoch_inner_validation_aggregate_map50_95",
+  "tie_break": ["fewer_epochs", "lower_learning_rate", "lexical_run_name"],
+  "unity_outcomes_allowed_for_tuning": false
+}

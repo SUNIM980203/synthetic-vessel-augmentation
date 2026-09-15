@@ -1,0 +1,43 @@
+{
+  "protocol_version": "v16",
+  "frozen_local_date": "2026-07-29",
+  "frozen_before_any_fasterrcnn_training": true,
+  "detector": {
+    "architecture": "torchvision Faster R-CNN MobileNetV3-Large FPN",
+    "initial_weights": "FasterRCNN_MobileNet_V3_Large_FPN_Weights.DEFAULT (COCO_V1)",
+    "num_classes_including_background": 6,
+    "frozen_components": "backbone and transform",
+    "trainable_components": "RPN and ROI heads",
+    "input_min_size": 640,
+    "input_max_size": 640,
+    "evaluation_score_floor": 0.001,
+    "evaluation_nms_iou": 0.5,
+    "evaluation_max_detections": 300
+  },
+  "seeds": [20260723, 20260724, 20260725, 20260726, 20260727],
+  "conditions": {
+    "duplicate": ["real", "real_duplicate"],
+    "unity_medium150": ["real", "vessel_medium_v10_150"],
+    "realcutout_medium150": ["real", "vessel_realcontrol_v12_150"]
+  },
+  "data_root": "PreparedData/yolo_expanded_v1",
+  "validation_images": "real/images/val",
+  "training": {
+    "epochs": 10,
+    "batch": 4,
+    "workers": 0,
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "amp": true,
+    "augmentation": "none beyond the fixed dataset conditions",
+    "checkpoint": "exact epoch-10 last.pt"
+  },
+  "statistics": {
+    "primary_endpoint": "maritime-vessel AP50-95 on the scene-disjoint xView validation split",
+    "primary_contrast": "unity_medium150 - duplicate paired by seed",
+    "primary_pass": "one-sided paired Student-t LCB95 > 0, df=4",
+    "ordered_secondary": "if primary passes, Unity versus RealCutout non-inferiority with margin -0.005 AP"
+  },
+  "external_unlock": "HRSC and DIOR evaluation is allowed only after the internal primary gate passes"
+}

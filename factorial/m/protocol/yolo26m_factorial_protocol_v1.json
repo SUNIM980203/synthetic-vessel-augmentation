@@ -1,0 +1,198 @@
+{
+  "title": "YOLO26m fresh 2x2x2 model-size replication",
+  "version": "v1",
+  "locked_before_first_factorial_result": true,
+  "scientific_question": "How does the Unity-minus-Duplicate x adaptation-scope interaction behave across YOLO26n, YOLO26s, and prospectively frozen YOLO26m?",
+  "hypothesis": "No preferred directional outcome; YOLO26m is classified by the frozen M1-M5 hierarchy.",
+  "model_architecture": "YOLO26m five-class graph, 21,780,598 parameters, Detect module 23",
+  "initial_checkpoint": {
+    "status": "PASS",
+    "locked_utc": "2026-09-01T06:34:00.692012+00:00",
+    "locked_checkpoint": "<WORKSPACE>\\yolo26m_scope_lr_factorial_followup_v1\\02_checkpoint\\yolo26m_xview_initial_locked.pt",
+    "locked_checkpoint_sha256": "a8b5539273c0f416abb195bec923f0c41a343a5a4a514919eaccb50dbbe64c23",
+    "selected_epoch": 28,
+    "selected_validation_metric_name": "metrics/mAP50-95(B)",
+    "selected_validation_metric": 0.18958,
+    "completed_epochs": 48,
+    "requested_batch": -1.0,
+    "realized_batch": 4,
+    "selection_rule": "Ultralytics validation-fitness best.pt within requested 50 epochs and patience 20; no factorial outcome used",
+    "exact_training_config": {
+      "model": "yolo26m.pt",
+      "data": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "epochs": 50,
+      "patience": 20,
+      "batch": -1.0,
+      "imgsz": 640,
+      "save": true,
+      "save_period": -1,
+      "cache": false,
+      "device": "0",
+      "workers": 4,
+      "pretrained": true,
+      "optimizer": "auto",
+      "seed": 20260723,
+      "deterministic": true,
+      "single_cls": false,
+      "rect": false,
+      "cos_lr": false,
+      "close_mosaic": 10,
+      "resume": false,
+      "amp": true,
+      "fraction": 1.0,
+      "freeze": null,
+      "multi_scale": 0.0,
+      "compile": false,
+      "dropout": 0.0,
+      "val": true,
+      "split": "val",
+      "save_json": false,
+      "iou": 0.7,
+      "max_det": 300,
+      "plots": false,
+      "lr0": 0.01,
+      "lrf": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "warmup_momentum": 0.8,
+      "warmup_bias_lr": 0.1,
+      "box": 7.5,
+      "cls": 0.5,
+      "dfl": 1.5,
+      "nbs": 64,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "translate": 0.1,
+      "scale": 0.5,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.5,
+      "bgr": 0.0,
+      "mosaic": 0.5,
+      "mixup": 0.0,
+      "cutmix": 0.0,
+      "copy_paste": 0.0,
+      "auto_augment": "randaugment",
+      "erasing": 0.4
+    },
+    "config_sha256": "4e001b89839c367c2cdc3d37f8fb53b79644dccda3d1f4b963fe996779e6776d",
+    "training_results_sha256": "66bea7b3abb542b7c4f4c2e1462f54f819ca9c430b36ac6fed96677d88704322",
+    "training_args_sha256": "fd817ff4a1a9721d330916b43adca730c5648b019f9b0aae5d3b1b6d6b6e9e28",
+    "training_stdout": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_initial_training_stdout_20260901_121118.log",
+    "training_log_sha256": "710e0f6d82d3a5d358554dd94553cee5d4f33f8dfebaf244a2f04c7f10737d81",
+    "training_stderr": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_initial_training_stderr_20260901_121118.log",
+    "training_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prestart_invalid_technical": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_initial_prestart_invalid_technical_20260901.md",
+    "factorial_outcome_used": false
+  },
+  "design": {
+    "conditions": [
+      "duplicate",
+      "unity_medium150"
+    ],
+    "scopes": {
+      "head_only": 23,
+      "full_network": 0
+    },
+    "learning_rates": [
+      0.0001,
+      0.0002
+    ],
+    "seeds": [
+      20260723,
+      20260724,
+      20260725,
+      20260726,
+      20260727,
+      20260728,
+      20260729,
+      20260730,
+      20260731,
+      20260732
+    ],
+    "accepted_cells": 80,
+    "batch": 16,
+    "epochs": 20,
+    "optimizer": "AdamW"
+  },
+  "datasets": {
+    "training": {
+      "duplicate": {
+        "yaml": "config/yolo_xview_expanded_duplicate_v1.yaml",
+        "yaml_sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134"
+      },
+      "unity_medium150": {
+        "yaml": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+        "yaml_sha256": "d4737b331ffc0b87cb844f30fca8cba54a54838dea21bb290753a0ccef82d480",
+        "identity": "retained; not regenerated"
+      }
+    },
+    "evaluation_order": [
+      "xview_test",
+      "hrsc2016_ms",
+      "dior_public_mirror"
+    ]
+  },
+  "primary": {
+    "dataset": "xview_test",
+    "metric": "vessel AP50-95",
+    "estimand": "mean over 10 paired seeds of 0.5*(DiD_1e-4+DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI",
+    "decision": "no preferred sign; report frozen estimate and classify by the prespecified M1-M5 hierarchy",
+    "t_test": "one-sample two-sided",
+    "sign_test": "exact two-sided excluding exact zero"
+  },
+  "secondary": [
+    "fixed-LR DiDs",
+    "ThreeWay",
+    "vessel and aggregate AP50-95/AP50/AP75",
+    "HRSC2016-MS",
+    "DIOR",
+    "model-size difference"
+  ],
+  "interruption": {
+    "accepted_resume": false,
+    "interrupted_attempt": "INVALID_TECHNICAL",
+    "restart_only_after_explicit safety review": true,
+    "restart_source": "fixed YOLO26m checkpoint",
+    "same_scientific_config": true,
+    "systematic_failure": "STOP"
+  },
+  "prediction_retention": {
+    "per_image": true,
+    "full_precision": true,
+    "domains": [
+      "xview_test",
+      "hrsc2016_ms",
+      "dior_public_mirror"
+    ],
+    "metadata": [
+      "image_id",
+      "class",
+      "bbox",
+      "confidence",
+      "seed",
+      "condition",
+      "scope",
+      "LR",
+      "model_size",
+      "checkpoint SHA",
+      "evaluator hash"
+    ]
+  },
+  "claim_boundary": "three YOLO26 sizes, one target class, two LRs, retained datasets; within-study, not independent or untouched; model-size differences are descriptive and non-causal",
+  "prohibited": [
+    "v48 manuscript or figure editing",
+    "YOLO26l",
+    "same-scale Support High/Low",
+    "dose response",
+    "transformer detector",
+    "new LRs",
+    "new freeze depths",
+    "post-result retuning"
+  ]
+}

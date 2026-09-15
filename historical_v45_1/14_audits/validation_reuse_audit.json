@@ -1,0 +1,134 @@
+{
+  "audit": "historical validation reuse",
+  "status": "PASS_WITH_DISCLOSURE_REQUIRED",
+  "case": "A_SAME_VALIDATION_SPLIT",
+  "no_training_or_inference_performed": true,
+  "critical_answer": "Yes. The common starting checkpoint was selected on the same 375-image, nine-acquisition-scene xView validation split later used for the locally frozen primary scope-interaction endpoint.",
+  "counts": {
+    "initial_checkpoint_validation_images": 375,
+    "scope_interaction_validation_images": 375,
+    "image_overlap": 375,
+    "image_overlap_percent": 100.0,
+    "initial_acquisition_scenes": 9,
+    "scope_interaction_acquisition_scenes": 9,
+    "acquisition_scene_overlap": 9
+  },
+  "equality": {
+    "resolved_validation_directory_equal": true,
+    "ordered_image_id_path_scene_hash_manifest_equal": true,
+    "image_id_and_content_hash_sets_equal": true,
+    "acquisition_scene_sets_equal": true,
+    "exact_manifest_hash_equal": true,
+    "all_conditions_shared_common_initialization": true,
+    "condition_specific_unity_selection_leakage_identified": false,
+    "historical_source_model_selection_independence": false
+  },
+  "manifest_hashes": {
+    "initial_ordered_normalized_manifest_sha256": "1d3b66467af1f227be781b7220615b0e661c2075c1ec1816ca7bc53aa94a22f2",
+    "scope_interaction_ordered_normalized_manifest_sha256": "1d3b66467af1f227be781b7220615b0e661c2075c1ec1816ca7bc53aa94a22f2",
+    "initial_image_id_content_set_sha256": "fa2205a32299f4995a4b780ae41435958035e1c75fbbe464bbb3b2eac40b8263",
+    "scope_interaction_image_id_content_set_sha256": "fa2205a32299f4995a4b780ae41435958035e1c75fbbe464bbb3b2eac40b8263",
+    "source_scene_list_sha256": "c1ca1737455a59c74c9ee5bd033a7d15d7505c2f5e496141daca09fc0daeb555",
+    "coco_validation_manifest_sha256": "8d2c9c39df45f5e3221683cd26c9e38d330fc824cd942541c9c205ab4c53b456"
+  },
+  "resolved_inputs": {
+    "initial_validation_directory": "PreparedData/yolo_expanded_v1/real/images/val",
+    "scope_interaction_validation_directory": "PreparedData/yolo_expanded_v1/real/images/val",
+    "initial_yaml_val_entry": "real/images/val",
+    "scope_interaction_yaml_val_entry": "real/images/val",
+    "source_scenes": [
+      "10400100279C5E00",
+      "1040010028066A00",
+      "1040010028371A00",
+      "10400100291B4C00",
+      "104001002A075000",
+      "104001002A102700",
+      "104001002ABEA500",
+      "104001002AC17A00",
+      "104001002C0AB900"
+    ]
+  },
+  "initial_best_checkpoint_selection": {
+    "checkpoint": {
+      "path": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+      "sha256": "7aab2bd4aebb6181df0350c80883e0c1b2615f363481649d579a23b0e4a7140f",
+      "bytes": 5423343
+    },
+    "recorded_data_yaml": "config/yolo_xview_expanded_duplicate_v1.yaml",
+    "recorded_split": "val",
+    "recorded_validation_enabled": true,
+    "configured_epochs": 50,
+    "configured_patience": 20,
+    "completed_result_rows": 47,
+    "unique_best_results_epoch": 27,
+    "unique_best_validation_map50_95": 0.14549,
+    "checkpoint_embedded_metric": 0.14549,
+    "checkpoint_metric_matches_unique_best_row": true,
+    "checkpoint_embedded_data_yaml": "config/yolo_xview_expanded_duplicate_v1.yaml",
+    "checkpoint_embedded_split": "val",
+    "checkpoint_epoch_field_note": "The serialized release checkpoint records epoch=-1 after Ultralytics finalization; its embedded train_metrics exactly match the unique results.csv maximum at epoch 27."
+  },
+  "v48_freeze_check": {
+    "frozen_data_yaml_sha256": "f8197e77251311a0c586dcb0b8a90c76d0154e3b6623936c59842b2f16a2ebae",
+    "actual_data_yaml_sha256": "f8197e77251311a0c586dcb0b8a90c76d0154e3b6623936c59842b2f16a2ebae",
+    "match": true,
+    "evaluator_uses_data_yaml_and_split_val": true
+  },
+  "source_files": [
+    {
+      "path": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134",
+      "bytes": 264
+    },
+    {
+      "path": "runs/expanded_v1/duplicate_yolo26n_s20260723/args.yaml",
+      "sha256": "ca91b8f26b2a18955b2f64eb76a46214ada60a20c020206ef905bbb0ee1bca73",
+      "bytes": 1997
+    },
+    {
+      "path": "runs/expanded_v1/duplicate_yolo26n_s20260723/results.csv",
+      "sha256": "5536760e4a9ad906a42bfa6bf6cad9a66b05566b11f9753a7c58f03e7df29024",
+      "bytes": 6100
+    },
+    {
+      "path": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+      "sha256": "7aab2bd4aebb6181df0350c80883e0c1b2615f363481649d579a23b0e4a7140f",
+      "bytes": 5423343
+    },
+    {
+      "path": "config/yolo_xview_expanded_real_v1.yaml",
+      "sha256": "f8197e77251311a0c586dcb0b8a90c76d0154e3b6623936c59842b2f16a2ebae",
+      "bytes": 237
+    },
+    {
+      "path": "tools/evaluate_v48_scope_validation.py",
+      "sha256": "ee66f0df31f6c3880ef8f43159f84e4564e5ab7353391546dc14e605f094cc42",
+      "bytes": 13201
+    },
+    {
+      "path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/validation_freeze.json",
+      "sha256": "0de5fdf247de6f0a58acc24245bdde048153056cb72a2a73c0f39dbe97301a6e",
+      "bytes": 5737
+    },
+    {
+      "path": "PreparedData/xview_expanded_512_v1/annotations/instances_val.json",
+      "sha256": "8d2c9c39df45f5e3221683cd26c9e38d330fc824cd942541c9c205ab4c53b456",
+      "bytes": 6204683
+    },
+    {
+      "path": "AnalysisResults/xview_expanded_512_v1_validation.json",
+      "sha256": "93ebe9a56c53956ab3aa6cfce8096d37c093902988683025b812014dd4cd87b1",
+      "bytes": 1708
+    }
+  ],
+  "publication_consequence": {
+    "required_label": "locally frozen primary scope-interaction endpoint on the historical xView validation split",
+    "prohibited_independence_claims": [
+      "untouched confirmation set",
+      "fully independent confirmatory validation",
+      "independent validation cohort",
+      "prospectively untouched validation data"
+    ],
+    "limitation": "The common starting checkpoint had historically been selected on this same xView validation split. Scope-specific settings were selected using Duplicate-only inner development and every condition shared the initialization, but the endpoint was not independent of historical source-model selection."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "analysis": "frozen_small_scale_feasibility_transportability_test",
+  "state": "FROZEN_BEFORE_SMALL_HOST_PIXEL_OPENING",
+  "frozen_at_utc": "2026-08-14T16:16:49.685614+00:00",
+  "scientific_question": "Can the unchanged Medium-validated High/Low support pipeline satisfy all frozen gates when only object scale changes to Small?",
+  "only_scientific_change": {
+    "variable": "object_scale_stratum",
+    "from": "Medium [32,64)",
+    "to": "Small [16,32)",
+    "implementation": "multiply frozen Medium reference-box width and height by exactly 0.5 about the unchanged center"
+  },
+  "host_selection": {
+    "source": "Airbus-Ship-Detection train_v2 annotation-empty RGB",
+    "target_count": 30,
+    "historical_use_required": "NEVER_USED",
+    "exclude_every_previously_selected_or_screened_airbus_source": true,
+    "rank_seed": "small-fresh-airbus-host-order-20260815",
+    "selector_source_sha256": "44167c39c2d272c8cdb5141249cf523beac56f0f4ee2142be6e8dc6e9072411e",
+    "frozen_engine_sha256": "d9aa732e691a6e84eef5c40e1f2d4cdd9dc125b1baf29fb33d4de49e61db8979",
+    "exclusion_manifest_hashes": {
+      "AnalysisResults/v40_airbus_rgb_hosts_retry1/host_selection_manifest.json": "bc6ad0a2597971b4aa85d1b6c2a5200f367683006f5e2aab8be0092e64a436b2",
+      "AnalysisResults/v41_airbus_rgb_hosts/host_selection_manifest.json": "23cf7ed46a4df78d6e6fc26e036356c27c1081ef7481c5db8e5fca3ca53a2a17",
+      "AnalysisResults/v42_airbus_rgb_hosts/host_selection_manifest.json": "67568080e0c2252b5451d022de67fc94c22f5d50b0134bff1577ef21d5d3b21b",
+      "AnalysisResults/v43_airbus_rgb_hosts/host_selection_manifest.json": "3e8be83923d679e776e84b529c5ea86535d390f3580fb77b6a3c84af4593560c",
+      "AnalysisResults/v47_airbus_rgb_hosts/host_selection_manifest.json": "29a5b20ea79587e7221b18be567ff17fa73a77660b2e8d31d72db374139a438d"
+    }
+  },
+  "candidate_generation": {
+    "raw_candidates_per_host": 2080,
+    "retained_unique_valid_per_host": 2048,
+    "appearance_generator_unchanged": true,
+    "appearance_ranges_unchanged": true,
+    "uid_logic_unchanged": true,
+    "rng64_logic_unchanged": true,
+    "dedup_and_canonical_retention_unchanged": true,
+    "contrast_gain": 1.25,
+    "unsharp": 0.0
+  },
+  "selector": "S3_direct_wasserstein_family_balance",
+  "support_gates": {
+    "median_min": 0.06,
+    "fraction_gap_ge_0_040_min": 0.8,
+    "minimum_gap_min": 0.005
+  },
+  "absolute_weber_standardized_wasserstein_max_each_arm": 0.5,
+  "other_radiometry_geometry_placement_appearance_integrity": "exact final Medium frozen definitions and thresholds",
+  "medium_pipeline_hashes_sha256": "0afcc45caceef59df24c1dc9653f022d0d5b43da2cfc82d45f83f2b275b82ce0",
+  "runner_sha256": "8768297569087cf9d2f3cd9c6434d0d18b7d06948e379299d031948014f1a8e6",
+  "one_shot": true,
+  "no_retry": true,
+  "no_post_result_modification": true,
+  "no_host_replacement": true,
+  "TRAINING_UNLOCKED": false,
+  "DETECTOR_TRAINING_RUNS": 0,
+  "AP_VALUES_INSPECTED": 0,
+  "SMALL_BRANCH_TUNING_ITERATIONS": 0
+}

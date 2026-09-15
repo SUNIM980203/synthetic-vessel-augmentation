@@ -1,0 +1,93 @@
+{
+  "study": "fresh scope x LR factorial",
+  "created_utc": "2026-08-19T08:09:16.628105+00:00",
+  "frozen_before_new_factorial_results": true,
+  "roles": {
+    "training_runner": {
+      "path": "tools/run_scope_lr_factorial_fresh.py",
+      "sha256": "2116c2cadd21b470c6d04c3c08ddcb23ac725b5858388e93b67df261c3a43dbe"
+    },
+    "training_watchdog": {
+      "path": "tools/watch_scope_lr_factorial_fresh.ps1",
+      "sha256": "1c1779998fa128eaf8d1886c8c14f232e250e5004496bac8d8ff31c3172cf599"
+    },
+    "shared_definitions": {
+      "path": "tools/scope_lr_factorial_common.py",
+      "sha256": "1fb0edbb85db65eebed97fee95c58fb0e1245a9680fb81ca27416c9439d566f9"
+    },
+    "ap_evaluator": {
+      "path": "tools/evaluate_scope_lr_factorial.py",
+      "sha256": "723763ff3bb357665173e6b274dbd89a89baf6e69b4fb334138d326e28632bf2"
+    },
+    "factorial_contrast_script": {
+      "path": "tools/analyze_scope_lr_factorial.py",
+      "sha256": "114b48334f51752dced64f5a16b30cd99bc8cf9b683ce8de10c073c8b48ce237"
+    },
+    "ci_script": {
+      "path": "tools/analyze_scope_lr_factorial.py",
+      "sha256": "114b48334f51752dced64f5a16b30cd99bc8cf9b683ce8de10c073c8b48ce237"
+    },
+    "sign_test_script": {
+      "path": "tools/analyze_scope_lr_factorial.py",
+      "sha256": "114b48334f51752dced64f5a16b30cd99bc8cf9b683ce8de10c073c8b48ce237"
+    },
+    "scene_bootstrap_script": {
+      "path": "tools/analyze_scope_lr_factorial_scene.py",
+      "sha256": "126866432d1329f4d7441d7cd3ce10bb8d020b9fd325090f028c1723f1ccd3c2"
+    },
+    "loso_script": {
+      "path": "tools/analyze_scope_lr_factorial_scene.py",
+      "sha256": "126866432d1329f4d7441d7cd3ce10bb8d020b9fd325090f028c1723f1ccd3c2"
+    },
+    "table_generator": {
+      "path": "tools/generate_scope_lr_factorial_tables.py",
+      "sha256": "9542811499f6d3bfdcceb986e80aa9ad96b1cd530ad52ad87d0c2fba6dc06766"
+    },
+    "final_report_generator": {
+      "path": "tools/finalize_scope_lr_factorial.py",
+      "sha256": "cca55184ed2505081f53356615857cde2a03dd0efed453338423de9e2d91948c"
+    },
+    "figure_exp_1": {
+      "path": "scope_lr_factorial_followup_v1/11_figures/figure_exp_1.py",
+      "sha256": "4d3b0b981ee2c210f4067832f7f3e474428347a31cf52b93f53445c421d5f8f7"
+    },
+    "figure_exp_2": {
+      "path": "scope_lr_factorial_followup_v1/11_figures/figure_exp_2.py",
+      "sha256": "93d8fbbea90e4a5af27da256311ab219c8b04c3e5546474294a324ca15a166d8"
+    },
+    "figure_exp_3": {
+      "path": "scope_lr_factorial_followup_v1/11_figures/figure_exp_3.py",
+      "sha256": "8fc1c51cf2a343846bd8936da1e69740ca6de11c41023e64b5417834344a1043"
+    },
+    "figure_exp_4": {
+      "path": "scope_lr_factorial_followup_v1/11_figures/figure_exp_4.py",
+      "sha256": "8460826f28f069562ad9199dae302ed711820c8f2a490575ea7a4813a1ea901d"
+    }
+  },
+  "primary_analysis": {
+    "dataset": "xview scene-disjoint held-out test",
+    "metric": "vessel AP50-95",
+    "per_seed_estimand": "0.5*(DiD_1e-4 + DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI across 10 paired seeds",
+    "test": "one-sample two-sided t-test against zero",
+    "sign_test": "exact two-sided binomial sign test excluding exact zeros",
+    "decision": "positive if the two-sided Student-t 95% CI lower endpoint exceeds zero"
+  },
+  "scene_analysis": {
+    "replicates": 2000,
+    "rng_seed": 20260813,
+    "shared_scene_multiplicities": true,
+    "zero_target_ap": 0,
+    "also_report_excluding_zero_target": true,
+    "loso": true
+  },
+  "interpretation_rule": {
+    "case_d_operationalization": "ThreeWay Student-t 95% CI excludes zero",
+    "direction_reversal_operationalization": "designated Marginal_DiD mean is negative"
+  },
+  "prestart_technical_amendment": {
+    "path": "scope_lr_factorial_followup_v1/00_protocol/scope_lr_factorial_prestart_technical_amendment.json",
+    "sha256": "df6a933a4fcf14f2e8c0d2fcd6e6e65d9225413f2c9a62f69587a2a09fd8f7cd",
+    "scientific_change": false
+  }
+}

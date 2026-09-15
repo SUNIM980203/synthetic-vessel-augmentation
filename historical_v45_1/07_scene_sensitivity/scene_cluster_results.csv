@@ -1,0 +1,4 @@
+contrast,split,effect_role,full_effect,bootstrap_lower_95,bootstrap_upper_95,positive_fraction,loso_minimum,loso_maximum,positive_loso,total_loso
+Unity Medium150 - Duplicate,xView test,reconstructed scene-analysis AP,0.007943417604423287,0.0,0.014054706296663683,0.9005,0.003749172171621616,0.01252769726902776,9,9
+Unity Medium150 - RealCutout Medium150,xView test,reconstructed scene-analysis AP,0.002475732416474681,0.0,0.004306604664131277,0.9005,0.0010059813804825415,0.0038244727049362576,9,9
+Medium150 - Small150,xView val,reconstructed scene-analysis AP,0.008541672475616782,-0.0026342119428039547,0.011552118204001392,0.682,-0.00164961542745152,0.010191868751042887,8,9

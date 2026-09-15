@@ -1,0 +1,16 @@
+{
+  "amendment": "prestart technical wrapper path-encoding correction",
+  "timestamp_utc": "2026-08-19T08:11:25.993691+00:00",
+  "prior_lock_sha256": "eb23b96f27e73bd2bd07fc0db63ccc77b7e8a5fad654743e926eec7d1062d6ef",
+  "prior_lock_copy": "scope_lr_factorial_followup_v1/00_protocol/scope_lr_factorial_PROTOCOL_LOCK_prestart_superseded.txt",
+  "fresh_training_ledger_existed": false,
+  "accepted_run_count": 0,
+  "new_factorial_results_visible": false,
+  "failure": "Windows PowerShell 5.1 decoded the BOM-free UTF-8 Korean absolute workspace path as the active ANSI code page, producing an invalid path before the runner launched.",
+  "correction": "Derive the workspace root from ASCII-only $PSCommandPath rather than embedding the Korean absolute path.",
+  "scientific_protocol_changed": false,
+  "training_configuration_changed": false,
+  "analysis_configuration_changed": false,
+  "execution_order_changed": false,
+  "wrapper_sha256_after_correction": "1c1779998fa128eaf8d1886c8c14f232e250e5004496bac8d8ff31c3172cf599"
+}

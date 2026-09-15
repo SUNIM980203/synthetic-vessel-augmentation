@@ -1,0 +1,107 @@
+{
+  "analysis": "frozen_duplicate_backbone_vessel_feature_support_v1",
+  "weights": "runs\\expanded_v1\\duplicate_yolo26n_s20260723\\weights\\best.pt",
+  "feature_layers": [
+    16,
+    19,
+    22
+  ],
+  "embedding_dimensions": 448,
+  "imgsz": 640,
+  "seed": 20260728,
+  "domains": {
+    "real": {
+      "count": 3727,
+      "diversity": {
+        "pairwise_cosine_distance_median": 0.18876156210899353,
+        "pairwise_cosine_distance_p95": 0.6735973954200745,
+        "effective_rank": 7.418256759643555
+      }
+    },
+    "allscale150": {
+      "count": 150,
+      "support": {
+        "overall": {
+          "synthetic_nearest_real_distance_median": 0.13942384719848633,
+          "real_leave_one_out_distance_median": 0.07501113414764404,
+          "median_distance_ratio": 1.8587086941527782,
+          "supported_fraction_at_scale_specific_real_p95": 0.36
+        },
+        "by_scale": {
+          "tiny_lt16": {
+            "synthetic_count": 53,
+            "real_reference_count": 1200,
+            "synthetic_nearest_real_distance_median": 0.1504439115524292,
+            "synthetic_nearest_real_distance_p95": 0.28756558895111084,
+            "real_leave_one_out_distance_median": 0.08744752407073975,
+            "real_leave_one_out_distance_p95": 0.11181608587503433,
+            "median_distance_ratio": 1.720390796661377,
+            "supported_fraction_at_real_p95": 0.22641509433962265
+          },
+          "small_16_32": {
+            "synthetic_count": 91,
+            "real_reference_count": 925,
+            "synthetic_nearest_real_distance_median": 0.12987399101257324,
+            "synthetic_nearest_real_distance_p95": 0.24276351928710938,
+            "real_leave_one_out_distance_median": 0.058682799339294434,
+            "real_leave_one_out_distance_p95": 0.11678363382816315,
+            "median_distance_ratio": 2.2131526470184326,
+            "supported_fraction_at_real_p95": 0.4065934065934066
+          },
+          "medium_32_64": {
+            "synthetic_count": 6,
+            "real_reference_count": 572,
+            "synthetic_nearest_real_distance_median": 0.101024329662323,
+            "synthetic_nearest_real_distance_p95": 0.14037083089351654,
+            "real_leave_one_out_distance_median": 0.07239729166030884,
+            "real_leave_one_out_distance_p95": 0.12473499029874802,
+            "median_distance_ratio": 1.3954159021377563,
+            "supported_fraction_at_real_p95": 0.8333333333333334
+          }
+        }
+      },
+      "scale_matched_mmd_squared": 0.19070160388946533,
+      "mmd_bandwidth": 0.8271061009332964,
+      "diversity": {
+        "pairwise_cosine_distance_median": 0.3895031809806824,
+        "pairwise_cosine_distance_p95": 0.6826843023300171,
+        "effective_rank": 17.738178253173828
+      }
+    },
+    "medium150": {
+      "count": 150,
+      "support": {
+        "overall": {
+          "synthetic_nearest_real_distance_median": 0.09145638346672058,
+          "real_leave_one_out_distance_median": 0.07239729166030884,
+          "median_distance_ratio": 1.2632569723165585,
+          "supported_fraction_at_scale_specific_real_p95": 0.74
+        },
+        "by_scale": {
+          "medium_32_64": {
+            "synthetic_count": 150,
+            "real_reference_count": 572,
+            "synthetic_nearest_real_distance_median": 0.09145638346672058,
+            "synthetic_nearest_real_distance_p95": 0.18958522379398346,
+            "real_leave_one_out_distance_median": 0.07239729166030884,
+            "real_leave_one_out_distance_p95": 0.12473499029874802,
+            "median_distance_ratio": 1.2632570266723633,
+            "supported_fraction_at_real_p95": 0.74
+          }
+        }
+      },
+      "scale_matched_mmd_squared": 0.061202049255371094,
+      "mmd_bandwidth": 0.6996682070431497,
+      "diversity": {
+        "pairwise_cosine_distance_median": 0.24800682067871094,
+        "pairwise_cosine_distance_p95": 0.5275068283081055,
+        "effective_rank": 17.031635284423828
+      }
+    }
+  },
+  "test_split_used": false,
+  "pca": {
+    "pc1_explained_fraction": 0.48494744300842285,
+    "pc2_explained_fraction": 0.10930045694112778
+  }
+}

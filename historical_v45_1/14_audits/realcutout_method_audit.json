@@ -1,0 +1,94 @@
+{
+  "audit": "RealCutout source and method audit",
+  "status": "PASS_WITH_EXPLICIT_LIMITATIONS",
+  "source_files": [
+    {
+      "path": "tools/build_real_vessel_control.py",
+      "sha256": "d13b85463ac6a48ea4890fdaedf0a56846f81e0c512515193250f12bc7f42d3f"
+    },
+    {
+      "path": "tools/build_hybrid_dataset.py",
+      "sha256": "86af177d8ab9fc5fc6c9b3b842b338b7b81dcf72c5f32479b7fae184905df3c5"
+    },
+    {
+      "path": "tools/build_qualitative_figures_v29.py",
+      "sha256": "c5ed0bb375a7b58119c8c3a319f7e60fe22cf3a265c492b8f275ce126cd3f724"
+    }
+  ],
+  "source": {
+    "dataset_partition": "xView training only",
+    "category": "vessel (COCO category 5)",
+    "source_box_geometric_mean_scale_interval_px": [
+      24,
+      80
+    ],
+    "upper_bound_exclusive": true,
+    "same_scene_source_forbidden": true,
+    "library_candidates": 209,
+    "library_source_scenes": 11,
+    "unique_cutouts_used": 104,
+    "maximum_reuse": 3,
+    "same_scene_insertions": 0
+  },
+  "crop_and_mask": {
+    "ground_truth_instance_mask_used": false,
+    "bbox_padding_fraction_of_max_side": 0.18,
+    "minimum_padding_px": 4,
+    "border_width_px": 2,
+    "rgb_distance_threshold": 22,
+    "morphology": "3x3 open then close",
+    "component_selection": "area divided by one plus distance to crop center; retain nearby components",
+    "alpha_smoothing": "3x3 Gaussian, sigma 0.65",
+    "tight_crop_threshold": "alpha > 20",
+    "occupancy_gate": "alpha > 64 area >= 12% of tight box"
+  },
+  "selection_and_resize": {
+    "aspect_shortlist": 12,
+    "selection": "minimize absolute log aspect mismatch, then minimum reuse, then seeded random tie",
+    "resize": "exact target width and height with Lanczos",
+    "reference_scale_max_absolute_error": 0.0,
+    "aspect_absolute_log_distortion_p50": 0.0732956243,
+    "aspect_absolute_log_distortion_p95": 0.4282372431
+  },
+  "compositing": {
+    "shared_with_unity": true,
+    "sensor_aware": true,
+    "vessel_render_v2": true,
+    "steps": [
+      "local brightness adjustment",
+      "local color adjustment",
+      "weak PSF blur",
+      "low-strength blurred shadow",
+      "RGBA alpha composite"
+    ],
+    "histogram_matching": false,
+    "constant_opacity": false
+  },
+  "matched_factors": [
+    "host image",
+    "insertion location",
+    "target width",
+    "target height",
+    "geometric-mean target scale",
+    "inserted-object count",
+    "modified-image count",
+    "total-image exposure",
+    "compositing function/settings"
+  ],
+  "unmatched_or_imperfect_factors": [
+    "object/source appearance",
+    "alpha-mask provenance and quality",
+    "possible source-context retention",
+    "possible object-pixel omission",
+    "anisotropic aspect resizing",
+    "input-alpha provenance"
+  ],
+  "interpretation": "geometry-, placement-, count-, exposure-, and largely compositing-matched cross-scene real-vessel control; not a pure appearance-only control",
+  "figure6": {
+    "selection_rule_preserved": true,
+    "training_pair": "middle-scale tercile case nearest the group median scale and placement score",
+    "detector_outcome_used_to_select_training_pair": false,
+    "boundary_visibility_sampling_claim_allowed": false,
+    "figure_sha256": "d98fcf1af9b03b4a877d2be42da4e112613ab082f01dd14fecca4d84709662be"
+  }
+}

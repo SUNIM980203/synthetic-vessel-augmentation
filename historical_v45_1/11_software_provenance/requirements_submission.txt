@@ -1,0 +1,11 @@
+
+ultralytics==8.4.50
+torch==2.11.0
+torchvision
+numpy
+scipy
+pandas
+Pillow
+opencv-python
+pycocotools
+matplotlib

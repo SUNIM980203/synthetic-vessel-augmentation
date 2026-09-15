@@ -1,0 +1,75 @@
+{
+  "study": "feature-support confirmation v20",
+  "frozen_local_date": "2026-07-31",
+  "status": "frozen before Small150 materialization and training",
+  "known_before_freeze": [
+    "Medium150 training-feature support and five-seed validation results",
+    "internal xView test results",
+    "HRSC2016-MS and DIOR external results",
+    "v15 adaptation-scope results",
+    "v16 Faster R-CNN result",
+    "v19 representation-drift result"
+  ],
+  "seeds": [20260723, 20260724, 20260725, 20260726, 20260727],
+  "initial_weights": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+  "real_train_coco": "PreparedData/xview_expanded_512_v1/annotations/instances_train.json",
+  "real_train_images": "PreparedData/xview_expanded_512_v1/images/train",
+  "unity_cutouts": "PreparedData/unity_cutouts_v4_detailed_mediumscale",
+  "small_dataset": "PreparedData/hybrid_xview_expanded_vessel_v20_small150",
+  "small_yolo_dataset": "PreparedData/yolo_expanded_v1/vessel_small_v20_150",
+  "small_data_yaml": "config/yolo_xview_expanded_vessel_small_v20_150.yaml",
+  "medium_data_yaml": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+  "duplicate_data_yaml": "config/yolo_xview_expanded_duplicate_v1.yaml",
+  "medium_checkpoint_pattern": "runs/expanded_head_only_v11/medium150_head20_adamw1e4_b16_s{seed}/weights/last.pt",
+  "duplicate_checkpoint_pattern": "runs/expanded_head_only_v11/duplicate_head20_adamw1e4_b16_s{seed}/weights/last.pt",
+  "small_checkpoint_pattern": "runs/feature_support_confirmation_v20/small150_head20_adamw1e4_b16_s{seed}/weights/last.pt",
+  "small_distribution": {
+    "target_counts": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 150},
+    "bbox_scale_min_inclusive": 16.0,
+    "bbox_scale_max_exclusive": 32.0,
+    "seed": 20260723,
+    "semantic_placement": true,
+    "sensor_aware": true,
+    "vessel_render_v2": true,
+    "strict_vessel_water": true,
+    "target_schedule_buffer": 12,
+    "max_insertions_per_image": 1,
+    "placement_retries": 32,
+    "required_augmented_images": 150
+  },
+  "support_gate": {
+    "exact_unity_vessels": 150,
+    "small_supported_fraction_less_than_medium": 0.740,
+    "data_integrity_required": true
+  },
+  "training": {
+    "epochs": 20,
+    "imgsz": 640,
+    "batch": 16,
+    "workers": 0,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "warmup_epochs": 0.5,
+    "patience": 100,
+    "freeze": 23,
+    "deterministic": true,
+    "checkpoint": "last.pt"
+  },
+  "evaluation": {
+    "split": "val",
+    "imgsz": 640,
+    "batch": 8,
+    "workers": 0,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300
+  },
+  "primary": {
+    "endpoint": "maritime_vessel AP50-95",
+    "contrast": "Medium150 - Small150 paired by seed",
+    "decision": "one-sided 95% Student-t LCB > 0",
+    "t_0.95_df4": 2.131846786326649
+  },
+  "test_or_external_data_authorized": false
+}

@@ -1,0 +1,11 @@
+branch,family,host_count,minimum_slots_per_host,maximum_slots_per_host,mean_slots_per_host,total_slots
+pre_amendment_generic,baseline,30,128,128,128.0,3840
+pre_amendment_generic,fine_detail,30,256,256,256.0,7680
+pre_amendment_generic,material_chroma,30,256,256,256.0,7680
+pre_amendment_generic,spatial_frequency,30,640,640,640.0,19200
+pre_amendment_generic,texture_realization,30,800,800,800.0,24000
+post_amendment_historical,baseline,150,128,128,128.0,19200
+post_amendment_historical,fine_detail,150,256,256,256.0,38400
+post_amendment_historical,material_chroma,150,256,256,256.0,38400
+post_amendment_historical,spatial_frequency,150,640,640,640.0,96000
+post_amendment_historical,texture_realization,150,800,800,800.0,120000

@@ -1,0 +1,432 @@
+{
+  "analysis": "v48_adaptation_scope_confirmation_freeze",
+  "created_utc": "2026-08-11T18:13:58.339282+00:00",
+  "status": "PASS",
+  "confirmation_seeds": [
+    20260723,
+    20260724,
+    20260725,
+    20260726,
+    20260727,
+    20260728,
+    20260729,
+    20260730,
+    20260731,
+    20260732
+  ],
+  "selected_scope_settings": {
+    "head_only": {
+      "scope": "head_only",
+      "freeze": 23,
+      "learning_rate": 0.0002,
+      "epochs": 20,
+      "run_name": "head_only_duplicate_lr2e-4_e20_s20260819",
+      "final_epoch_inner_val_map50_95": 0.3779
+    },
+    "full_network": {
+      "scope": "full_network",
+      "freeze": 0,
+      "learning_rate": 0.0001,
+      "epochs": 20,
+      "run_name": "full_network_duplicate_lr1e-4_e20_s20260819",
+      "final_epoch_inner_val_map50_95": 0.37294
+    }
+  },
+  "selection_rule": "final_epoch_inner_validation_aggregate_map50_95",
+  "selection_only_used_duplicate_inner_validation": true,
+  "unity_outcomes_used_for_selection": false,
+  "public_validation_test_external_used_for_selection": false,
+  "initial_weights": {
+    "path": "runs/expanded_v1/duplicate_yolo26n_s20260723/weights/best.pt",
+    "sha256": "7aab2bd4aebb6181df0350c80883e0c1b2615f363481649d579a23b0e4a7140f"
+  },
+  "conditions": {
+    "duplicate": {
+      "data": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "data_sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134",
+      "train_tree": "PreparedData/yolo_expanded_v1/real_duplicate",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187047698,
+      "train_tree_sha256": "3cc61d896aa138de33a746c833bfa26acc57420fb1c75e7dd17e194ecb55239c"
+    },
+    "unity_medium150": {
+      "data": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+      "data_sha256": "d4737b331ffc0b87cb844f30fca8cba54a54838dea21bb290753a0ccef82d480",
+      "train_tree": "PreparedData/yolo_expanded_v1/vessel_medium_v10_150",
+      "train_tree_file_count": 3000,
+      "train_tree_bytes": 187263426,
+      "train_tree_sha256": "44c49ed5e7d30ae558cf3e5fdaba12db772bb18cb9d5342694365bdcef4298c9"
+    }
+  },
+  "effective_confirmation_recipe": {
+    "imgsz": 640,
+    "batch": 16,
+    "workers": 0,
+    "optimizer": "AdamW",
+    "lrf": 0.1,
+    "warmup_epochs": 0.5,
+    "patience": 100,
+    "deterministic": true,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 10,
+    "checkpoint": "last.pt"
+  },
+  "reused_checkpoints": [
+    {
+      "scope": "full_network",
+      "condition": "duplicate",
+      "seed": 20260723,
+      "checkpoint": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260723/weights/last.pt",
+      "checkpoint_sha256": "e0ae530ceb4ccbf942d3352667df60cc7d4d265cc3b1b68c15e778628a03e97a",
+      "results_csv": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260723/results.csv",
+      "results_csv_sha256": "95bd1e05d365aacadbf1f64fe86ac2429fe7967843758c461aa143401e93af52",
+      "args_yaml": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260723/args.yaml",
+      "args_yaml_sha256": "b021adc114dc9817285c92bc8be4e7c0292ad11c3a0aad05b201e8e126f11822",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "duplicate",
+      "seed": 20260724,
+      "checkpoint": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260724/weights/last.pt",
+      "checkpoint_sha256": "dd6bb9a899d680ba67b7d6972876d3243702ee469d9927d09b2707b88c0e72ec",
+      "results_csv": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260724/results.csv",
+      "results_csv_sha256": "6f20b56392a84b1c74ffa6ffca26b1f5c48d9a58d7e085f8ea22ce6fc7e0a983",
+      "args_yaml": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260724/args.yaml",
+      "args_yaml_sha256": "8cf20bc68919c3981b9f78df11088d12adc78d8e8a58e604c7eb0dc38e137708",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "duplicate",
+      "seed": 20260725,
+      "checkpoint": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260725/weights/last.pt",
+      "checkpoint_sha256": "4ddb9416a2a3cb13afbe544a82ac29cdd63fa80458d89134bede122aa17fbd60",
+      "results_csv": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260725/results.csv",
+      "results_csv_sha256": "ec23b0ed814ce24095403730dd3869e173f4b0852faefa858d204d6ffc017812",
+      "args_yaml": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260725/args.yaml",
+      "args_yaml_sha256": "2ba9f2d1680c542f9a08e2ba02054f1e52f817aed21d6d1135f64460755da8c9",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "duplicate",
+      "seed": 20260726,
+      "checkpoint": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260726/weights/last.pt",
+      "checkpoint_sha256": "25c5aba1d66a9a1e0fc38baf66b3e67ad43c99f71d3ad1fee7016331f8d05526",
+      "results_csv": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260726/results.csv",
+      "results_csv_sha256": "05c5f75c772f54f89703ca8f92b3a56ae4edf092e1ddb7ab0f2b201567093dee",
+      "args_yaml": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260726/args.yaml",
+      "args_yaml_sha256": "c9f3143e55471456191532ce34258e334d62bd314c7a3b6cd4cb16e90dfd2b20",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "duplicate",
+      "seed": 20260727,
+      "checkpoint": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260727/weights/last.pt",
+      "checkpoint_sha256": "001b3dbd3f34c4333747dac5efab235361351d614e7464e0e12aa00638a2155b",
+      "results_csv": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260727/results.csv",
+      "results_csv_sha256": "b4fa11da0203b59d752114caf7d161eb13c0c558a18ed7e22885a59dd5c084f7",
+      "args_yaml": "runs/head_only_factorial_v15/duplicate_full20_adamw1e4_b16_s20260727/args.yaml",
+      "args_yaml_sha256": "fd5deedf6d4fedf80bbbfff816c98fcfb19463463d6a6c0188f80f6b0ef1acee",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "unity_medium150",
+      "seed": 20260723,
+      "checkpoint": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260723/weights/last.pt",
+      "checkpoint_sha256": "10f5bc0c2161947900e2df63cc83972eb4f67cdc7feca92aab0bbf7dde9eb6f9",
+      "results_csv": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260723/results.csv",
+      "results_csv_sha256": "272de38fc59e9c7a6299d525c188fd17ce8f7ea9fcfab3f1907b70b84fa7efe7",
+      "args_yaml": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260723/args.yaml",
+      "args_yaml_sha256": "6d8311f97f5545920e8de0285533ad5d6bfa7369da205a2996a30cb4fa0120de",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "unity_medium150",
+      "seed": 20260724,
+      "checkpoint": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260724/weights/last.pt",
+      "checkpoint_sha256": "b7bad6ae52f0fe3d035e5f5315fc8d5132f9657d725b77bcbe1abb41f2fd9c3f",
+      "results_csv": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260724/results.csv",
+      "results_csv_sha256": "21c4b0cfd6bd50e6a20e64bcc738a5d5fac0562b33b024b10dbf986cf169dcb8",
+      "args_yaml": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260724/args.yaml",
+      "args_yaml_sha256": "56bccdca6c3b4ae76d8074fb8c8d0e0268d234a9043f1e2ec09562a4fb48a6f4",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "unity_medium150",
+      "seed": 20260725,
+      "checkpoint": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260725/weights/last.pt",
+      "checkpoint_sha256": "dcf80eab96831ad080c7df886f41b807c8ac6ec1cef9ee1d4cfca59ee94f4439",
+      "results_csv": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260725/results.csv",
+      "results_csv_sha256": "94984fa5f70e87ae2855be8aa0ab6bef055367a5aafed35e847a13fd5ac38510",
+      "args_yaml": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260725/args.yaml",
+      "args_yaml_sha256": "e41f6c8a09f2b68c35c7a050a5691eba0e745d7fe4356971038d29eff5665a9f",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "unity_medium150",
+      "seed": 20260726,
+      "checkpoint": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260726/weights/last.pt",
+      "checkpoint_sha256": "9a9f7212cd731d972d184832950a4e1d112ab847cc82c9a064e5604a33dc6534",
+      "results_csv": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260726/results.csv",
+      "results_csv_sha256": "af7f53c750245b73ba04277d3785659626c30512d78b0167fe61a87283b15f29",
+      "args_yaml": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260726/args.yaml",
+      "args_yaml_sha256": "b94cc473e3dfad63e3ce0c9cca9d0447e67b88a9d0d9d31d03be6a33ff2870d8",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    },
+    {
+      "scope": "full_network",
+      "condition": "unity_medium150",
+      "seed": 20260727,
+      "checkpoint": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260727/weights/last.pt",
+      "checkpoint_sha256": "7db0a427e34bf4397e89e9e10208a7bc1da1c23cbce0916527861ab10fd3dec7",
+      "results_csv": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260727/results.csv",
+      "results_csv_sha256": "dc1792a39b0d7feb879425ce352bb7c3be1f02e55e3cac8db991fc571b169d6b",
+      "args_yaml": "runs/head_only_factorial_v15/medium150_full20_adamw1e4_b16_s20260727/args.yaml",
+      "args_yaml_sha256": "3d25501e3cd2b2de8d0eef1fcc08e798bc24308d3468f6858ad7d27dee60da8a",
+      "recipe_checks": {
+        "model": true,
+        "data": true,
+        "epochs": true,
+        "batch": true,
+        "imgsz": true,
+        "workers": true,
+        "optimizer": true,
+        "lr0": true,
+        "lrf": true,
+        "warmup_epochs": true,
+        "seed": true,
+        "deterministic": true,
+        "freeze": true,
+        "mosaic": true,
+        "mixup": true,
+        "copy_paste": true,
+        "close_mosaic": true
+      }
+    }
+  ],
+  "reused_count": 10,
+  "new_training_count": 30,
+  "frozen_files": [
+    {
+      "path": "docs/v48_adaptation_scope_fairness_protocol_en_ko.md",
+      "sha256": "2910519183d7e981267fdd8fc526bf0b632eb4982d2e89460f6ce88c4a87a5bd",
+      "bytes": 3568
+    },
+    {
+      "path": "config/adaptation_scope_fairness_v48.json",
+      "sha256": "f9e88c53b033b4eb0ecfb2e468dc713a294693b54d631acefb7ac13dbf57e690",
+      "bytes": 1142
+    },
+    {
+      "path": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134",
+      "bytes": 264
+    },
+    {
+      "path": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+      "sha256": "d4737b331ffc0b87cb844f30fca8cba54a54838dea21bb290753a0ccef82d480",
+      "bytes": 271
+    },
+    {
+      "path": "PreparedData/v48_adaptation_scope_inner_split/split_manifest.json",
+      "sha256": "93e5dee1e2fa61ff51c39f868ff514d9d2bc95507a8e27d13f59efe65676b87f",
+      "bytes": 16994
+    },
+    {
+      "path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/development_freeze.json",
+      "sha256": "27b83daff5e9ac34201e7a62c982aa4e061d413f8675a213d111d19ae500ae9b",
+      "bytes": 1078
+    },
+    {
+      "path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/development/selected_scope_settings.json",
+      "sha256": "3d0377a27bd56f07c29f4233e2ce609fec9b66a2e61ba3c0588f00205e2ddee8",
+      "bytes": 618
+    },
+    {
+      "path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/development/training_ledger.json",
+      "sha256": "5b76bbdea6cf176386a2ec260ea7694e52003fa45f8f747986ba1be6e43221b5",
+      "bytes": 16511
+    },
+    {
+      "path": "tools/run_v48_scope_confirmation.py",
+      "sha256": "af59e669928cb184c7260ceda47a2f9bc56607e5aabbe0fa777a9dbe68dcfec3",
+      "bytes": 9500
+    },
+    {
+      "path": "tools/watch_v48_scope_confirmation.ps1",
+      "sha256": "4406eb3208a6297cee2e1c42a7a742a8ea6cfb1f6dcea4918033df7c0339eed3",
+      "bytes": 4238
+    }
+  ]
+}

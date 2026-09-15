@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.png
+*.gz
+*.zip
+.env
+.env.*

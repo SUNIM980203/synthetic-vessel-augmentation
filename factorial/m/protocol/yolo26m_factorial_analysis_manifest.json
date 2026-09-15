@@ -1,0 +1,119 @@
+{
+  "study": "YOLO26m model-size scope x LR replication",
+  "created_utc": "2026-09-01T06:34:00.970249+00:00",
+  "frozen_before_first_factorial_result": true,
+  "roles": {
+    "protocol_freezer": {
+      "path": "tools/freeze_yolo26m_factorial_protocol.py",
+      "sha256": "fe56c804f62d6224ccecca7b3648487e1e781c191677d17b85f62a60df4958bd"
+    },
+    "shared_definitions": {
+      "path": "tools/yolo26m_factorial_common.py",
+      "sha256": "cc2e3f0574891321779977615f0c4a09e8ff59e8f092ef75047152ab159d7bae"
+    },
+    "training_runner": {
+      "path": "tools/run_yolo26m_factorial_fresh.py",
+      "sha256": "e668d14c153efec518f39e06d48dcbbd931788ac6429cab4d621418bbf55df4a"
+    },
+    "ap_evaluator": {
+      "path": "tools/evaluate_yolo26m_factorial.py",
+      "sha256": "b48bfc021475f3ebaaf51f024953d29cfd64fffa9c36528f2c3eafd1c46a123b"
+    },
+    "factorial_contrast_script": {
+      "path": "tools/analyze_yolo26m_factorial.py",
+      "sha256": "c759a29045fe998d7a472f0206106d1d0c402e68979762128305dfb41c52d25f"
+    },
+    "scene_bootstrap_script": {
+      "path": "tools/analyze_yolo26m_factorial_scene.py",
+      "sha256": "9a2217d8bf95a29cdf2c927214575dbf0139c5896023f25ca7b5ea7c2b04e265"
+    },
+    "model_size_comparison": {
+      "path": "tools/compare_yolo26_n_s_m_factorial.py",
+      "sha256": "6a6d221a87d4e4f316e5217a03280a98f18d396b6d4583c442ab03e3eda3945c"
+    },
+    "numerical_audit": {
+      "path": "tools/audit_yolo26m_factorial_numerics.py",
+      "sha256": "1bbf9e52797627bb48eb67bd30ff2f2af322494dd7580bdd71c35caab426a400"
+    },
+    "table_generator": {
+      "path": "tools/generate_yolo26m_factorial_tables.py",
+      "sha256": "84791c830a5212eb3a614e262dfffb3d773a44a8f42e695b56b6b26383053ec9"
+    },
+    "figure_generator": {
+      "path": "tools/generate_yolo26m_factorial_figures.py",
+      "sha256": "2e32fca2ace2110cd475420afa69655624105da648a63807edc7a4074b1a512c"
+    },
+    "final_report_generator": {
+      "path": "tools/finalize_yolo26m_factorial.py",
+      "sha256": "0252dbfbe0fb096d43fde584edb2ce7b54386ed21853f5e5ace139e8dc1ae28d"
+    },
+    "postprocess_orchestrator": {
+      "path": "tools/run_yolo26m_factorial_postprocess.py",
+      "sha256": "8b1cb0407ec051369eaa41a7471bd6f032ce1e2f50d32fe0a40182dc6dd48545"
+    }
+  },
+  "primary": {
+    "dataset": "xview_test",
+    "metric": "vessel AP50-95",
+    "estimand": "mean over 10 paired seeds of 0.5*(DiD_1e-4+DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI",
+    "decision": "no preferred sign; report frozen estimate and classify by the prespecified M1-M5 hierarchy",
+    "t_test": "one-sample two-sided",
+    "sign_test": "exact two-sided excluding exact zero"
+  },
+  "scene": {
+    "replicates": 2000,
+    "rng_seed": 20260813,
+    "shared_multiplicities": true,
+    "loso_scenes": 9,
+    "interpretation": "sparse-cluster sensitivity"
+  },
+  "classification": {
+    "precedence": [
+      "M5",
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "M1": "m has the same nonzero sign as n, the opposite sign from s, and paired m-minus-s 95% CI excludes zero in its observed direction",
+    "M2": "m has the same nonzero sign as s, the opposite sign from n, and paired m-minus-n 95% CI excludes zero in its observed direction",
+    "M3": "m marginal 95% CI includes zero after M5/M1/M2 are not satisfied; approximately null or inconclusive",
+    "M4": "remaining pattern after M5/M1/M2/M3; qualitatively different from both under the frozen hierarchy",
+    "M5": "all three paired cross-model 95% CIs (n-s, n-m, s-m) include zero; directional differences not overstated",
+    "pairing": "same retained training-seed labels; cross-model comparisons are descriptive, not causal"
+  },
+  "relocked_utc": "2026-09-02T09:12:46.625049+00:00",
+  "relock_reason": "user-authorized fresh restart after abnormal reboot under restored Hyper-V/VBS-off stability environment",
+  "superseded_protocol_lock_sha256": "a582788ca56500ecf742749520a0e0b5b03c7a351062857ee041dff7536546fb",
+  "prestart_invalid_audit": {
+    "path": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_factorial_prestart_invalid_20260901_154000/yolo26m_factorial_prestart_invalid_technical.json",
+    "sha256": "d4d390e93e6b7acc53f437aaeb323e0a3aae60877289c43c5ee3086510a91dc1"
+  },
+  "technical_environment_addenda": [
+    {
+      "recorded_utc": "2026-09-02T07:28:25.652780+00:00",
+      "reason": "explicit user-requested pause followed by explicit restart with Hyper-V enabled for concurrent work",
+      "scientific_design_changed": false,
+      "accepted_cells_before_transition": 0,
+      "partial_rows_seen": 4,
+      "technical_mode": "yolo26m_hyperv_vbs_on_250w_85pct_boostoff_v2",
+      "audit": {
+        "path": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_factorial_user_pause_hyperv_transition_20260902_162327/yolo26m_factorial_user_pause_hyperv_transition.json",
+        "sha256": "2089e9def4330d293081d03e4d56937b441886d8fcc729a592d8d561a1ff1089"
+      }
+    },
+    {
+      "recorded_utc": "2026-09-02T09:12:44.709187+00:00",
+      "reason": "explicit user request to proceed after reporting that the computer shut down under overload and rebooted with the previously configured Hyper-V-off setting",
+      "scientific_design_changed": false,
+      "accepted_cells_before_transition": 0,
+      "partial_invalid_rows_seen": 4,
+      "technical_mode": "yolo26m_hyperv_off_250w_85pct_boostoff_v3_after_abnormal_reboot",
+      "audit": {
+        "path": "yolo26m_scope_lr_factorial_followup_v1/16_audits/yolo26m_factorial_abnormal_reboot_restart_20260902_180909/yolo26m_factorial_abnormal_reboot_restart.json",
+        "sha256": "19544253fed19a5ce454f1e875ef842e80bde2ee7b4bcb709e88ab1f4a2c97f8"
+      }
+    }
+  ]
+}

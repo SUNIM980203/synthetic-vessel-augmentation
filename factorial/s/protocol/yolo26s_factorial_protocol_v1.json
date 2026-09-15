@@ -1,0 +1,192 @@
+{
+  "title": "YOLO26s fresh 2x2x2 model-size replication",
+  "version": "v1",
+  "locked_before_first_factorial_result": true,
+  "scientific_question": "Does the positive YOLO26n Unity-augmentation x adaptation-scope interaction persist in YOLO26s?",
+  "hypothesis": "YOLO26s Marginal DiD is positive on xView-test vessel AP50-95.",
+  "model_architecture": "YOLO26s, 9,951,734 parameters, Detect module 23",
+  "initial_checkpoint": {
+    "status": "PASS",
+    "locked_utc": "2026-08-24T06:15:47.712286+00:00",
+    "locked_checkpoint": "<WORKSPACE>\\yolo26s_scope_lr_factorial_replication_v1\\09_checkpoints\\yolo26s_xview_initial_locked.pt",
+    "locked_checkpoint_sha256": "cc0e9af1c3d2f6c2bfc39b906f44c0113e525b538410247bf0ab19db3b3a26d1",
+    "selected_epoch": 12,
+    "selected_validation_metric_name": "metrics/mAP50-95(B)",
+    "selected_validation_metric": 0.17055,
+    "completed_epochs": 32,
+    "requested_batch": -1.0,
+    "realized_batch": 9,
+    "selection_rule": "Ultralytics validation-fitness best.pt within requested 50 epochs and patience 20; no factorial outcome used",
+    "exact_training_config": {
+      "model": "yolo26s.pt",
+      "data": "config/yolo_xview_expanded_duplicate_v1.yaml",
+      "epochs": 50,
+      "patience": 20,
+      "batch": -1.0,
+      "imgsz": 640,
+      "save": true,
+      "save_period": -1,
+      "cache": false,
+      "device": "0",
+      "workers": 4,
+      "pretrained": true,
+      "optimizer": "auto",
+      "seed": 20260723,
+      "deterministic": true,
+      "single_cls": false,
+      "rect": false,
+      "cos_lr": false,
+      "close_mosaic": 10,
+      "resume": false,
+      "amp": true,
+      "fraction": 1.0,
+      "freeze": null,
+      "multi_scale": 0.0,
+      "compile": false,
+      "dropout": 0.0,
+      "val": true,
+      "split": "val",
+      "save_json": false,
+      "iou": 0.7,
+      "max_det": 300,
+      "plots": false,
+      "lr0": 0.01,
+      "lrf": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "warmup_momentum": 0.8,
+      "warmup_bias_lr": 0.1,
+      "box": 7.5,
+      "cls": 0.5,
+      "dfl": 1.5,
+      "nbs": 64,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "translate": 0.1,
+      "scale": 0.5,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.5,
+      "bgr": 0.0,
+      "mosaic": 0.5,
+      "mixup": 0.0,
+      "cutmix": 0.0,
+      "copy_paste": 0.0,
+      "auto_augment": "randaugment",
+      "erasing": 0.4
+    },
+    "config_sha256": "7d52615e5cab77c715626e0830371f4910a445c2f1b12ad1adb9734af45a27c4",
+    "training_results_sha256": "bfc1c212faad75623c6114eb21d30539ca4bc7da1407b747f349cefee90284dc",
+    "training_args_sha256": "d0c476a1a6139d7595b461de289114a41d3ba6d8dcc3bfe6fc93134f6072192e",
+    "training_log_sha256": "3006a15f26a054eee6e3edffb9a045f8da906cc8cc2a63dfbc8d92807012c9c4",
+    "factorial_outcome_used": false
+  },
+  "design": {
+    "conditions": [
+      "duplicate",
+      "unity_medium150"
+    ],
+    "scopes": {
+      "head_only": 23,
+      "full_network": 0
+    },
+    "learning_rates": [
+      0.0001,
+      0.0002
+    ],
+    "seeds": [
+      20260723,
+      20260724,
+      20260725,
+      20260726,
+      20260727,
+      20260728,
+      20260729,
+      20260730,
+      20260731,
+      20260732
+    ],
+    "accepted_cells": 80,
+    "batch": 16,
+    "epochs": 20,
+    "optimizer": "AdamW"
+  },
+  "datasets": {
+    "training": {
+      "duplicate": {
+        "yaml": "config/yolo_xview_expanded_duplicate_v1.yaml",
+        "yaml_sha256": "184b598aeeaa0ce490b5737ffc2e3fa0bae657ccfe452e7cc4ccce2951d68134"
+      },
+      "unity_medium150": {
+        "yaml": "config/yolo_xview_expanded_vessel_medium_v10_150.yaml",
+        "yaml_sha256": "d4737b331ffc0b87cb844f30fca8cba54a54838dea21bb290753a0ccef82d480",
+        "identity": "retained; not regenerated"
+      }
+    },
+    "evaluation_order": [
+      "xview_test",
+      "hrsc2016_ms",
+      "dior_public_mirror"
+    ]
+  },
+  "primary": {
+    "dataset": "xview_test",
+    "metric": "vessel AP50-95",
+    "estimand": "mean over 10 paired seeds of 0.5*(DiD_1e-4+DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI",
+    "decision": "positive evidence iff lower CI endpoint > 0",
+    "t_test": "one-sample two-sided",
+    "sign_test": "exact two-sided excluding exact zero"
+  },
+  "secondary": [
+    "fixed-LR DiDs",
+    "ThreeWay",
+    "vessel and aggregate AP50-95/AP50/AP75",
+    "HRSC2016-MS",
+    "DIOR",
+    "model-size difference"
+  ],
+  "interruption": {
+    "accepted_resume": false,
+    "interrupted_attempt": "INVALID_TECHNICAL",
+    "restart_only_after_explicit safety review": true,
+    "restart_source": "fixed YOLO26s checkpoint",
+    "same_scientific_config": true,
+    "systematic_failure": "STOP"
+  },
+  "prediction_retention": {
+    "per_image": true,
+    "full_precision": true,
+    "domains": [
+      "xview_test",
+      "hrsc2016_ms",
+      "dior_public_mirror"
+    ],
+    "metadata": [
+      "image_id",
+      "class",
+      "bbox",
+      "confidence",
+      "seed",
+      "condition",
+      "scope",
+      "LR",
+      "model_size",
+      "checkpoint SHA",
+      "evaluator hash"
+    ]
+  },
+  "claim_boundary": "two YOLO26 sizes, one target class, two LRs, retained datasets; within-study, not independent or untouched; model-size difference is descriptive",
+  "prohibited": [
+    "manuscript editing",
+    "YOLO26m",
+    "Support High/Low",
+    "dose response",
+    "new LRs",
+    "post-result retuning"
+  ]
+}

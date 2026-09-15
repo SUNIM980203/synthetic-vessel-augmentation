@@ -1,0 +1,132 @@
+{
+  "title": "Fresh 2x2x2 Condition x Adaptation Scope x Learning Rate Factorial Experiment",
+  "version": "v1.0.1-prestart-technical",
+  "locked_before_new_factorial_outcomes": true,
+  "scientific_question": "Does the Unity-minus-Duplicate vessel-detection effect differ between head-only and full-network adaptation when both scopes are evaluated at the same two fixed learning rates?",
+  "design": {
+    "conditions": [
+      "duplicate",
+      "unity_medium150"
+    ],
+    "scopes": {
+      "head_only": 23,
+      "full_network": 0
+    },
+    "learning_rates": [
+      0.0001,
+      0.0002
+    ],
+    "training_seeds": [
+      20260723,
+      20260724,
+      20260725,
+      20260726,
+      20260727,
+      20260728,
+      20260729,
+      20260730,
+      20260731,
+      20260732
+    ],
+    "accepted_cells_required": 80,
+    "fresh_block_only": true,
+    "historical_cells_in_primary_test": false
+  },
+  "primary": {
+    "dataset": "xview scene-disjoint held-out test",
+    "metric": "vessel AP50-95",
+    "per_seed_estimand": "0.5*(DiD_1e-4 + DiD_2e-4)",
+    "ci": "two-sided Student-t 95% CI across 10 paired seeds",
+    "test": "one-sample two-sided t-test against zero",
+    "sign_test": "exact two-sided binomial sign test excluding exact zeros",
+    "decision": "positive if the two-sided Student-t 95% CI lower endpoint exceeds zero"
+  },
+  "secondary": {
+    "fixed_lr_did": true,
+    "three_way": "DiD_2e-4 - DiD_1e-4",
+    "lr_moderation_within_scope": true,
+    "xview_metrics": [
+      "vessel AP50-95",
+      "vessel AP50",
+      "vessel AP75",
+      "aggregate AP50-95",
+      "aggregate AP50",
+      "aggregate AP75"
+    ],
+    "transfer_datasets": [
+      "HRSC2016-MS",
+      "DIOR fixed public mirror"
+    ],
+    "multiplicity_adjustment": "none; explicitly descriptive secondary endpoints"
+  },
+  "scene_sensitivity": {
+    "replicates": 2000,
+    "rng_seed": 20260813,
+    "shared_scene_multiplicities": true,
+    "zero_target_ap": 0,
+    "also_report_excluding_zero_target": true,
+    "loso": true
+  },
+  "training_recipe_source": "retained v48 machine-readable confirmation freeze and exact args.yaml semantics",
+  "frozen_training_config": "scope_lr_factorial_followup_v1/02_configs/scope_lr_factorial_frozen_training_config.json",
+  "execution_order": "scope_lr_factorial_followup_v1/03_execution_order/scope_lr_factorial_execution_order.csv",
+  "schedule_rng_seed": 20260819,
+  "initial_checkpoint_sha256": "7aab2bd4aebb6181df0350c80883e0c1b2615f363481649d579a23b0e4a7140f",
+  "no_model_selection": true,
+  "accepted_checkpoint": "epoch-20 last.pt",
+  "interruption_policy": {
+    "accepted_resume": false,
+    "failed_attempt_status": "INVALID_TECHNICAL",
+    "restart_from_fixed_initial_checkpoint": true,
+    "max_failed_fresh_attempts_same_cell": 3,
+    "action_at_threshold": "STOP without scientific-protocol modification"
+  },
+  "prediction_retention": {
+    "datasets": [
+      "xview_test",
+      "hrsc2016_ms",
+      "dior_public_mirror"
+    ],
+    "per_image": true,
+    "numeric_rounding_before_archive": false,
+    "metadata": [
+      "seed",
+      "condition",
+      "scope",
+      "learning_rate",
+      "checkpoint sha256",
+      "evaluator version"
+    ]
+  },
+  "interpretation": {
+    "not_independent_confirmation": true,
+    "required_description": "a prospectively frozen factorial follow-up evaluated on the previously used scene-disjoint xView test set",
+    "claim_limit": "one detector, this recipe, and the two fixed learning rates",
+    "branches": [
+      "A positive marginal CI and both fixed-LR means positive",
+      "B positive marginal CI but fixed-LR directions not both positive",
+      "C marginal CI includes zero",
+      "D ThreeWay CI excludes zero",
+      "E marginal mean direction reverses"
+    ]
+  },
+  "stop_after": [
+    "80 accepted fresh cells",
+    "integrity audit",
+    "xView/HRSC/DIOR evaluation",
+    "prediction retention",
+    "factorial statistics",
+    "scene sensitivity",
+    "final report"
+  ],
+  "prohibited": [
+    "manuscript editing",
+    "Support High/Low training",
+    "retuning historical Tenengrad branch"
+  ],
+  "prestart_technical_amendment": {
+    "path": "scope_lr_factorial_followup_v1/00_protocol/scope_lr_factorial_prestart_technical_amendment.json",
+    "sha256": "df6a933a4fcf14f2e8c0d2fcd6e6e65d9225413f2c9a62f69587a2a09fd8f7cd",
+    "scientific_change": false
+  }
+}

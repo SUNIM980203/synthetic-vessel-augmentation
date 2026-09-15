@@ -1,0 +1,23 @@
+{
+  "study": "v48 adaptation-scope fairness post-lock evaluation",
+  "status": "FROZEN",
+  "frozen_utc": "2026-08-13T02:18:00+00:00",
+  "validation_decision_frozen_before_opening": true,
+  "validation_primary_decision": "positive",
+  "validation_aggregate_ap50_95_decision": "inconclusive",
+  "domain_order": ["xview_test", "hrsc2016_ms", "dior_public_mirror"],
+  "evaluation_jobs": 120,
+  "prediction_artifacts_to_save": false,
+  "checkpoint_manifest_sha256": "0de5fdf247de6f0a58acc24245bdde048153056cb72a2a73c0f39dbe97301a6e",
+  "files": {
+    "evaluator": {"path": "tools/evaluate_v48_scope_external.py", "sha256": "96493997400890f6b428624df34afd24eaadc4e0c81587bbfa1ba145c2658f37", "bytes": 7555},
+    "runner": {"path": "tools/run_v48_scope_external_task.ps1", "sha256": "c4a622257a3852eaa98a1d4eb1ec2b1b46351d5d518ecb18bde069070eb99fcd", "bytes": 558},
+    "validation_decision_lock": {"path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/validation/decision_lock.json", "sha256": "d1d2a0210ce79cda91f63755b7b150b4329ced9ef8ff3b67fe2364d6a81809d3", "bytes": 3427},
+    "validation_freeze": {"path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/validation_freeze.json", "sha256": "0de5fdf247de6f0a58acc24245bdde048153056cb72a2a73c0f39dbe97301a6e", "bytes": 5737},
+    "training_ledger": {"path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/confirmation/training_ledger.json", "sha256": "f31602c7649e456040819e1dc752f4e6f72d96739d32adae9a1981eb825a73cc", "bytes": 36533},
+    "confirmation_freeze": {"path": "AnalysisResults/expanded_v1/adaptation_scope_fairness_v48/confirmation_freeze.json", "sha256": "37bb6b2ab5d81db5797ab7c7ff33c8a082517582801ec2b86f0a20bd55d2dc35", "bytes": 16474},
+    "xview_test_yaml": {"path": "config/yolo_xview_expanded_real_v1.yaml", "sha256": "f8197e77251311a0c586dcb0b8a90c76d0154e3b6623936c59842b2f16a2ebae", "bytes": 237},
+    "hrsc2016_ms_yaml": {"path": "config/yolo_hrsc2016_ms_v13.yaml", "sha256": "b31e3a32d3402e7a4abb7415b7b03ecca6cdc2828b4274333fbd9a4585504ac1", "bytes": 222},
+    "dior_public_mirror_yaml": {"path": "config/yolo_dior_v14.yaml", "sha256": "6e2c0d0260c4085a9a57bbedca046bee32117b0c276bf6d10730c57bd64f180f", "bytes": 215}
+  }
+}
