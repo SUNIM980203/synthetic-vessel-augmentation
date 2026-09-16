@@ -2,7 +2,9 @@
 
 Public research archive: https://github.com/SUNIM980203/synthetic-vessel-augmentation . Python code is AGPL-3.0-only; other material has no additional open-content license (see LICENSE_STATUS.md). Archived release: https://doi.org/10.5281/zenodo.22760748. This archive does not assert manuscript submission readiness or journal acceptance.
 
-This package accompanies manuscript v49.4.2. It combines the earlier v45.1 evidence archive with the subsequent YOLO26n/s/m factorial follow-ups and the explicitly post-hoc ordinal-42 diagnostic. Historical files retain their original chronological claims; they do not supersede the later disclosures below.
+The archive version label v49.4.2 identifies the retained research-material package, not the latest manuscript revision. Its author metadata, AI-assistance disclosure and public-access guidance were checked against the four-author manuscript on September 16, 2026. The current manuscript and submission Supplement are not included; this update does not claim that the package contains all later manuscript text, references, figures or supplementary presentation. It combines the earlier v45.1 evidence archive with the subsequent YOLO26n/s/m factorial follow-ups and the explicitly post-hoc ordinal-42 diagnostic. Scientific results, protocols and historical code are unchanged. Historical files retain their original chronological claims; they do not supersede the later disclosures below.
+
+Authors: Hyunbin Choi, Donghyun Woo, Ruben D. Espejo Jr., and Sunjin Yu. See `docs/AUTHOR_METADATA.md` for affiliations and `CITATION.cff` for archive citation metadata. The Zenodo DOI identifies research materials, not a published journal article.
 
 ## Start here
 

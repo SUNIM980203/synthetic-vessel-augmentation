@@ -12,9 +12,10 @@
 - [x] Document historical cross-links and unavailable inputs; not a self-contained training distribution.
 - [x] Run integrity and seed-summary utilities successfully (540 rows, 54 groups); disclose known scientific limitations and AI-assisted release preparation. Current manuscript/Supplement, figure and public-package assistance are distinguished in `../CODE_AI_DISCLOSURE.md`; the recorded verification run is an original release-preparation activity, not a new run during disclosure alignment.
 - [x] Upload ONLY this package, not the parent Unity project or its history; public repository visibility verified.
-- [ ] Create a fixed release and archive it in Zenodo; verify the version DOI.
-- [ ] Replace manuscript URL/DOI placeholders only after public access succeeds.
+- [x] Archive the named research-material ZIP in Zenodo; public version DOI: https://doi.org/10.5281/zenodo.22760748.
+- [x] Verify that the September 16 four-author manuscript cites the live GitHub repository and Zenodo archive DOI rather than URL/DOI placeholders.
+- [x] Align author order with the four-author manuscript: Choi, Woo, Espejo Jr., Yu. This is a metadata/documentation correction, not a new scientific analysis.
 
-Initial archive uploaded to https://github.com/SUNIM980203/synthetic-vessel-augmentation . Remote verification is recorded in the task. No Zenodo DOI exists yet; do not imply otherwise.
+The archive is public at https://github.com/SUNIM980203/synthetic-vessel-augmentation and https://doi.org/10.5281/zenodo.22760748. The archive label v49.4.2 is not the latest manuscript revision number. The current manuscript and submission Supplement are not included. The author metadata, AI disclosure and access scope have been checked against the September 16 four-author manuscript; this does not certify the archive as a complete copy of all later manuscript contents or as a journal-ready submission.
 
 Personal GitHub account SUNIM980203 and public target synthetic-vessel-augmentation were approved by the user. Authenticated CLI account matches. Consent recorded above is user-reported, not an independent rights audit. This archive is for scientific inspection, not a claim of manuscript acceptance or complete independent reproducibility.

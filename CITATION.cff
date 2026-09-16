@@ -1,5 +1,6 @@
 cff-version: 1.2.0
-message: "Please cite this research archive when using its materials. No paper publication or DOI is asserted."
+message: "Please cite this research archive when using its materials. The DOI identifies the research archive, not a published journal article."
+doi: "10.5281/zenodo.22760748"
 url: "https://github.com/SUNIM980203/synthetic-vessel-augmentation"
 title: "Model-Conditional Effects of Synthetic Vessel Augmentation in Optical Satellite Detection: Evidence Across Adaptation Scopes and YOLO26 Variants — Reproducibility Materials"
 authors:
@@ -9,6 +10,9 @@ authors:
   - family-names: Woo
     given-names: Donghyun
     affiliation: "Department of Advanced Defense Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"
+  - family-names: "Espejo Jr."
+    given-names: "Ruben D."
+    affiliation: "Department of Artificial Intelligence Convergence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"
   - family-names: Yu
     given-names: Sunjin
     affiliation: "Department of Artificial Intelligence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea"

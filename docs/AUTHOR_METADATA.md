@@ -8,7 +8,10 @@ Model-Conditional Effects of Synthetic Vessel Augmentation in Optical Satellite 
 
 1. Hyunbin Choi — Department of Artificial Intelligence Convergence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea.
 2. Donghyun Woo — Department of Advanced Defense Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea.
-3. Sunjin Yu — Department of Artificial Intelligence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea. Affiliation number 3 confirmed by the user.
+3. Ruben D. Espejo Jr. — Department of Artificial Intelligence Convergence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea. Manuscript affiliation 1, shared with Hyunbin Choi.
+4. Sunjin Yu — Department of Artificial Intelligence Engineering, Changwon National University, Changwon, Gyeongsangnam-do 51140, Republic of Korea. Manuscript affiliation 3.
+
+Author order and affiliations were aligned on September 16, 2026 with the author-supplied four-author manuscript. This metadata update does not add the manuscript or its Supplement to the archive and does not change the retained scientific evidence.
 
 Corresponding author: Sunjin Yu, sjyu@changwon.ac.kr.
 Public research-material contact: 20257555@gs.cwnu.ac.kr.
