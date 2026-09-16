@@ -4,7 +4,7 @@ No imagery, checkpoints, per-image predictions, embeddings, exact scene/patch me
 
 Dataset-specific restrictions and authorized acquisition must be checked by the authors. See `../historical_v45_1/THIRD_PARTY_DATA.md` and the archived split-construction metadata. xView, HRSC2016-MS and the DIOR public-mirror evaluation must remain distinguished. Do not substitute another DIOR partition and claim exact replication.
 
-The authors will not separately provide the excluded materials, including upon request. Public research-material inquiries may be sent to 20257555@gs.cwnu.ac.kr; this contact does not imply access to withheld artifacts. Hashes identify retained sources but do not reconstruct missing membership or grant access rights.
+The excluded materials remain outside the public release; no separate access service is offered for these files. Public research-material inquiries may be sent to 20257555@gs.cwnu.ac.kr; this contact does not imply access to withheld artifacts. Hashes identify retained sources but do not reconstruct missing membership or grant access rights.
 
 ## Upstream acquisition entry points
 
